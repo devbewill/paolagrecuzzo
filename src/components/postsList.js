@@ -22,7 +22,9 @@ export default () => (
 							title
 							slug
 							source
-							publishedDate(fromNow: true)
+							day: publishedDate(formatString: "DD")
+        					month: publishedDate(formatString: "MM")
+        					year: publishedDate(formatString: "YY")
 							tag
 							featuredImage {
 								fluid(maxWidth: 600) {
@@ -64,7 +66,9 @@ export default () => (
 									tags: edge.node.tag,
 									title: edge.node.title,
 									body: edge.node.body.childMarkdownRemark.html,
-									date: edge.node.publishedDate,
+									day: edge.node.day,
+									month: edge.node.month,
+									year: edge.node.year,
 									abstract: edge.node.abstract.childMarkdownRemark.html,
 									target: target
 								};

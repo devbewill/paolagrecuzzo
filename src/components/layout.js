@@ -17,7 +17,6 @@ const StyledLayout = styled.div`
 	h2 {
 
 		font-size: 3rem;
-		letter-spacing: -2px;
 		font-weight: 800;
 		padding: 0;
 	}
