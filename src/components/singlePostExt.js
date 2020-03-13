@@ -86,6 +86,8 @@ const SinglePostExt = ({ postProps }) => {
 
 
 		@media only screen and (max-width: 550px) {
+			margin-bottom: 2em;
+
 			.head { 
 				flex-flow: column;
 				padding: 0 1em;
@@ -111,6 +113,7 @@ const SinglePostExt = ({ postProps }) => {
 				right: 0;
 				left: auto;
 				padding-top: 2vw;
+				padding-left: 0;
 			}
 
 		
