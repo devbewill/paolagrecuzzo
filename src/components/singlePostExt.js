@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TextContent from '../components/textContent';
 
 const SinglePostExt = ({ postProps }) => {
 	const cleanUrl = (url) => {
@@ -30,11 +31,19 @@ const SinglePostExt = ({ postProps }) => {
 	// `;
 
 	const ImgPost = styled.div`
+		right: 0;
+		height: 300px;
+		width: 500px;
+		background: url(${(props) => props.background});
+		background-position: center center;
+		background-size: cover;
+		transition: all 0.4s ease-in;
 
 	`;
 
 	return (
-		<StyledLink href={postProps.target}>
+		<>
+			{/* <StyledLink href={postProps.target}> */}
 			<ImgPost background={postProps.imgPost} />
 			<ul className="tags">
 				{postProps.tags.map((tag, index) => {
@@ -43,13 +52,14 @@ const SinglePostExt = ({ postProps }) => {
 			</ul>
 			<div className="flexed">
 				<h2>{postProps.title}</h2>
-				{/* <span className="date">{postProps.date}</span> */}
-				<p className="by">
+				<span className="date">{postProps.date}</span>
+				{/* <p className="by">
 					by <span>{cleanUrl(postProps.target)}</span>
-				</p>
+				</p> */}
 			</div>
-			{/* <p className="body">{postProps.excerpt}</p> */}
-		</StyledLink>
+			<TextContent content={postProps.body} />
+			{/* </StyledLink> */}
+		</>
 	);
 };
 
