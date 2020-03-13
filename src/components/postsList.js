@@ -27,7 +27,7 @@ export default () => (
         					year: publishedDate(formatString: "YY")
 							tag
 							featuredImage {
-								fluid(maxWidth: 600) {
+								fluid(maxWidth: 1200, quality: 90) {
 									...GatsbyContentfulFluid_withWebp
 								}
 							}
