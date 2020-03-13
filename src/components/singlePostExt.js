@@ -104,6 +104,15 @@ const SinglePostExt = ({ postProps }) => {
 				}
 			}
 
+			.goToSource{
+				font-size: 1.5rem;
+				width: 45vw;
+				height: 5vh;
+				right: 0;
+				left: auto;
+				padding-top: 2vw;
+			}
+
 		
 			&:nth-child(2n){
 				.flexed {
