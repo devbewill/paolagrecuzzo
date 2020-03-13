@@ -21,10 +21,11 @@ const SinglePostExt = ({ postProps }) => {
 					font-size: 0.8rem;
 					font-weight: 700;
 				}
-				h2 {max-width: 50vw;}
+				h2 {max-width: 65vw;}
 			}
 
 			.tags {
+				margin: 0;
 				text-transform: uppercase;
 				font-size: 0.8rem;
 			}
@@ -46,13 +47,43 @@ const SinglePostExt = ({ postProps }) => {
 			}
 		}
 
+		.goToSource {
+			position: absolute;
+			display: block;
+			padding: 5vw 10px 0 30px;
+			width: 12vw;
+			height: 15vw;
+			background: rgba(0, 0, 0, 0.55);
+			z-index: 2;
+			left:2rem;
+			bottom: -2rem;
+			color: #fff;
+			line-height: 1;
+			font-size: 2.3rem;
+			font-weight: 700;
+			text-align: right;
+			font-family: 'Playfair Display';
+			transition: all 0.25s ease-in;
+			&:hover {
+				color: #222;
+				background: rgba(255, 255, 255, 0.55);
+
+			}
+		}
+
 
 		&:nth-child(2n){
 			.flexed {
 				flex-direction: row-reverse;
 			}
 			
+			.goToSource {
+				left: auto;
+				right:2rem;
+			}
+			
 		}
+
 
 		@media only screen and (max-width: 550px) {
 			.head { 
@@ -84,9 +115,9 @@ const SinglePostExt = ({ postProps }) => {
 
 	const ImgPost = styled.div`
 		position: absolute;
-		top: 2em;
-		left: 2em;
-		bottom: -2em;
+		top: 2rem;
+		left: 2rem;
+		bottom: -2rem;
 		right: 0;
 		background: url(${(props) => props.background}) no-repeat;
 		background-position: center center;
@@ -95,7 +126,7 @@ const SinglePostExt = ({ postProps }) => {
 
 		  ${StyledPost}:nth-child(2n) & {
 				left: 0;
-				right: 2em;
+				right: 2rem;
 			}
 
 		/* @media only screen and (max-width: 550px) {
@@ -125,11 +156,11 @@ const SinglePostExt = ({ postProps }) => {
 					<TextContent content={postProps.body} />
 				</div>
 				<div className="thumb">
+					<a href={postProps.target} className="goToSource">Vai alla fonte</a>
 					<ImgPost background={postProps.imgPost} />
 				</div>
 			</div>
 
-			{/*<StyledLink href={postProps.target}>vai alla fonte</StyledLink> */}
 		</StyledPost>
 	);
 };
