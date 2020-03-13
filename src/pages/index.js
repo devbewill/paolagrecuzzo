@@ -8,7 +8,7 @@ import Head from '../components/head';
 import Intro from '../components/intro';
 import Timeline from '../components/timeline';
 import Quote from '../components/quote';
-import LastWorks from '../components/lastWorks';
+// import LastWorks from '../components/lastWorks';
 import PostsList from '../components/postsList';
 
 const IndexPage = (props) => {
@@ -68,7 +68,7 @@ const IndexPage = (props) => {
 					</ImageWrapper>
 					<Timeline />
 					<PostsList />
-					<LastWorks />
+					{/* <LastWorks /> */}
 				</Container>
 			</Layout>
 		</Theme>

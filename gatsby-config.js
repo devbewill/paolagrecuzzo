@@ -7,8 +7,8 @@ const path = require('path');
 
 module.exports = {
 	siteMetadata: {
-		title: 'stefanoperelli.com',
-		author: 'Stefano Perelli'
+		title: 'paolagrecuzzo.com',
+		author: 'Paola Grecuzzo'
 	},
 	plugins: [
 		{
@@ -32,7 +32,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [ `Muli\:300,400,700,900`, `Oswald\:300,400,700` ],
+				fonts: [`Muli\:300,400,700,900`, `Oswald\:300,400,700`],
 				display: 'swap'
 			}
 		},

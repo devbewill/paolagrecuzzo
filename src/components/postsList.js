@@ -20,8 +20,8 @@ export default () => (
 					edges {
 						node {
 							title
-							link
 							slug
+							source
 							publishedDate(fromNow: true)
 							tag
 							featuredImage {
@@ -29,9 +29,13 @@ export default () => (
 									...GatsbyContentfulFluid_withWebp
 								}
 							}
-							bodyMd {
+							body {
 								childMarkdownRemark {
-									excerpt
+									html
+								}
+							}
+							abstract {
+								childMarkdownRemark {
 									html
 								}
 							}
@@ -51,17 +55,17 @@ export default () => (
 						{data.allContentfulBlogPost.edges.map((edge, index) => {
 							if (index < 9) {
 								let target, postProps;
-								edge.node.link ? (target = edge.node.link) : (target = `/blog/${edge.node.slug}`);
+								edge.node.link ? (target = edge.node.abstract.childMarkdownRemark.html) : (target = `/blog/${edge.node.slug}`);
 
 								postProps = {
 									slug: `/blog/${edge.node.slug}`,
 									imgPost: edge.node.featuredImage.fluid.src,
-									externalLink: edge.node.link,
+									externalLink: edge.node.source,
 									tags: edge.node.tag,
 									title: edge.node.title,
-									body: edge.node.bodyMd.childMarkdownRemark.html,
+									body: edge.node.body.childMarkdownRemark.html,
 									date: edge.node.publishedDate,
-									excerpt: edge.node.bodyMd.childMarkdownRemark.excerpt,
+									abstract: edge.node.abstract.childMarkdownRemark.html,
 									target: target
 								};
 

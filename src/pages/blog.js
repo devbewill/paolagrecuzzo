@@ -128,14 +128,15 @@ const BlogPage = () => {
 						slug
 						publishedDate(fromNow: true)
 						tag
+						source
 						featuredImage {
 							fluid(maxWidth: 400) {
 								...GatsbyContentfulFluid_withWebp
 							}
 						}
-						bodyMd {
+						body {
 							childMarkdownRemark {
-								excerpt
+								html
 							}
 						}
 					}
@@ -165,7 +166,7 @@ const BlogPage = () => {
 									</ul>
 									<h2>{edge.node.title}</h2>
 									<span className="date">{edge.node.publishedDate}</span>
-									<p>{edge.node.bodyMd.childMarkdownRemark.excerpt}</p>
+									<p>{edge.node.body.childMarkdownRemark.excerpt}</p>
 
 									<StyledLink to={`/blog/${edge.node.slug}`}>Read article</StyledLink>
 								</Post>

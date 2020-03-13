@@ -16,7 +16,7 @@ export const query = graphql`
 					...GatsbyContentfulFluid_withWebp
 				}
 			}
-			bodyMd {
+			body {
 				childMarkdownRemark {
 					html
 				}
@@ -39,7 +39,7 @@ const Post = (props) => {
 
 	const title = props.data.contentfulBlogPost.title;
 	const publishedDate = props.data.contentfulBlogPost.publishedDate;
-	const bodyMD = props.data.contentfulBlogPost.bodyMd.childMarkdownRemark.html;
+	const body = props.data.contentfulBlogPost.body.childMarkdownRemark.html;
 	const tags = props.data.contentfulBlogPost.tag;
 	// const danger_dom = <div dangerouslySetInnerHTML={{ __html: bodyMD }} />;
 	// const dom = <div>{danger_dom}</div>;
@@ -59,7 +59,7 @@ const Post = (props) => {
 						})}
 					</ul>
 
-					<TextContent content={bodyMD} />
+					<TextContent content={body} />
 
 					<nav>
 						<ul>
