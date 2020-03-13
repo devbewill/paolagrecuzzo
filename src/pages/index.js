@@ -15,9 +15,9 @@ const IndexPage = (props) => {
 	return (
 		<Theme>
 			<Layout>
-				<Container>
-					<Head title="Home" />
-					{/* <Intro />
+				{/* <Container> */}
+				<Head title="Home" />
+				{/* <Intro />
 
 					<Quote />
 					<section className="knowhow">
@@ -67,9 +67,9 @@ const IndexPage = (props) => {
 						<Img className="cycle" fluid={props.data.cycle.childImageSharp.fluid} />
 					</ImageWrapper>
 					<Timeline /> */}
-					<PostsList />
-					{/* <LastWorks /> */}
-				</Container>
+				<PostsList />
+				{/* <LastWorks /> */}
+				{/* </Container> */}
 			</Layout>
 		</Theme>
 	);

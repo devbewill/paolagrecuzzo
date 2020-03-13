@@ -32,7 +32,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Muli\:300,400,700,900`, `Oswald\:300,400,700`],
+				fonts: [`Playfair Display\:400,700,900`, `Gothic A1\:300,400,700`, `Italiana`],
 				display: 'swap'
 			}
 		},

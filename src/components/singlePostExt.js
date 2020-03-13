@@ -8,33 +8,29 @@ const SinglePostExt = ({ postProps }) => {
 		return urlCleaned;
 	};
 
-	const StyledLink = styled.a`
+	const StyledPost = styled.div`
+		display: flex;
+		margin: 4em 0;
 
+
+		.text {
+			padding: 0 3em;
+		}
+
+		.thumb {
+			padding-top: 7em;
+		}
+
+		&:nth-child(2n){
+			flex-direction: row-reverse;
+		}
 	`;
-
-	// const ImgPost = styled.div`
-	// 	opacity: 0;
-	// 	top: -120px;
-	// 	right: -2vw;
-	// 	position: absolute;
-	// 	height: 150px;
-	// 	width: 200px;
-	// 	background: url(${(props) => props.background});
-	// 	background-position: center center;
-	// 	background-size: cover;
-	// 	transition: all 0.4s ease-in;
-	// 	border: 0.3em solid #fff;
-
-	// 	${StyledLink}:hover & {
-	// 		opacity: 1;
-	// 	}
-	// `;
 
 	const ImgPost = styled.div`
 		right: 0;
-		height: 300px;
-		width: 500px;
-		background: url(${(props) => props.background});
+		min-height: 500px;
+		width: 40vw;
+		background: url(${(props) => props.background}) no-repeat;
 		background-position: center center;
 		background-size: cover;
 		transition: all 0.4s ease-in;
@@ -42,24 +38,23 @@ const SinglePostExt = ({ postProps }) => {
 	`;
 
 	return (
-		<>
-			{/* <StyledLink href={postProps.target}> */}
-			<ImgPost background={postProps.imgPost} />
-			<ul className="tags">
-				{postProps.tags.map((tag, index) => {
-					return <li key={index}>{tag}</li>;
-				})}
-			</ul>
-			<div className="flexed">
-				<h2>{postProps.title}</h2>
+		<StyledPost>
+			<div className="text">
 				<span className="date">{postProps.date}</span>
-				{/* <p className="by">
-					by <span>{cleanUrl(postProps.target)}</span>
-				</p> */}
+				<h2>{postProps.title}</h2>
+				<TextContent content={postProps.body} />
 			</div>
-			<TextContent content={postProps.body} />
-			{/* </StyledLink> */}
-		</>
+			<div className="thumb">
+				<ul className="tags">
+					{postProps.tags.map((tag, index) => {
+						return <li key={index}>{tag}</li>;
+					})}
+				</ul>
+				<ImgPost background={postProps.imgPost} />
+			</div>
+			<hr />
+			{/*<StyledLink href={postProps.target}>vai alla fonte</StyledLink> */}
+		</StyledPost>
 	);
 };
 
