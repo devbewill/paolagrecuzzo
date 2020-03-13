@@ -9,7 +9,7 @@ const SinglePostExt = ({ postProps }) => {
 	};
 
 	const StyledPost = styled.div`
-		margin: 4em 0;
+		margin: 0 0 10em 0;
 		
 		.head {
 			display: flex;
@@ -38,7 +38,11 @@ const SinglePostExt = ({ postProps }) => {
 			}
 
 			.thumb {
-				padding-top: 2em;
+				position: relative;
+				margin-top: 2em;
+				min-width: 40vw;
+				height: 500px;
+				background: ${(props) => props.theme.colors.primary};
 			}
 		}
 
@@ -59,13 +63,16 @@ const SinglePostExt = ({ postProps }) => {
 			}
 			.flexed {
 				flex-flow: column;
-
-				.text {padding: 0 1em;}
-			}
-
-			.flexed {
 				flex-direction: column-reverse;
+
+				.text {padding: 3em 1em;}
+
+				.thumb {
+					width: 100vw;
+					max-height: 200px;
+				}
 			}
+
 		
 			&:nth-child(2n){
 				.flexed {
@@ -76,18 +83,25 @@ const SinglePostExt = ({ postProps }) => {
 	`;
 
 	const ImgPost = styled.div`
+		position: absolute;
+		top: 2em;
+		left: 2em;
+		bottom: -2em;
 		right: 0;
-		min-height: 500px;
-		width: 40vw;
 		background: url(${(props) => props.background}) no-repeat;
 		background-position: center center;
 		background-size: cover;
 		transition: all 0.4s ease-in;
 
-		@media only screen and (max-width: 550px) {
+		  ${StyledPost}:nth-child(2n) & {
+				left: 0;
+				right: 2em;
+			}
+
+		/* @media only screen and (max-width: 550px) {
 			width: 100vw;
 			min-height: 200px;
-		}
+		} */
 
 	`;
 
