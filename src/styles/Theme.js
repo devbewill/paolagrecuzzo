@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
 	colors: {
-		primary: '#fe003f',
+		primary: '#000',
 		red: '#fe003f',
 		yellow: '#fbff62',
 		green: '#62ffaa',
@@ -12,7 +12,7 @@ const theme = {
 		softpink: '#ffdff1',
 		purple: '7505d8'
 	},
-	fonts: [ 'sans-serif', 'Roboto' ],
+	fonts: ['sans-serif', 'Roboto'],
 	fontSizes: {
 		small: '1em',
 		medium: '2em',

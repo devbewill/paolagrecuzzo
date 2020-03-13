@@ -5,11 +5,10 @@ import SinglePostInt from './singlePostInt';
 import SinglePostExt from './singlePostExt';
 
 const PostsSection = styled.section`
-	.postContainer {
+	/* .postContainer {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-	}
+	} */
 `;
 
 export default () => (
@@ -48,14 +47,14 @@ export default () => (
 		render={(data) => (
 			<>
 				<PostsSection>
-					<h2>
+					{/* <h2>
 						<span>in</span>sight
-					</h2>
+					</h2> */}
 					<div className="postContainer">
 						{data.allContentfulBlogPost.edges.map((edge, index) => {
 							if (index < 9) {
 								let target, postProps;
-								edge.node.link ? (target = edge.node.abstract.childMarkdownRemark.html) : (target = `/blog/${edge.node.slug}`);
+								edge.node.source ? (target = edge.node.source) : (target = `/blog/${edge.node.slug}`);
 
 								postProps = {
 									slug: `/blog/${edge.node.slug}`,
