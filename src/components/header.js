@@ -7,6 +7,7 @@ const Navbar = styled.header`
 	position: fixed;
 	padding: 0 1em;
 	top: 0;
+	z-index: 999;
 
 	.info {
 		text-align: right;
@@ -16,7 +17,7 @@ const Navbar = styled.header`
 			font-family: 'Italiana';
 			text-transform: uppercase;
 			font-size: 3rem;
-			margin-bottom: 0.2em;
+			margin: 0.2em 0;
 			
 		}
 

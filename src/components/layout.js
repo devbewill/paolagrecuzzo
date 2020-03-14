@@ -10,8 +10,6 @@ const StyledLayout = styled.div`
 		margin: 0;
 		font-weight: 800;
 		text-transform: uppercase;
-		letter-spacing: -5px;
-		line-height: 0.9;
 	}
 
 	h2 {
