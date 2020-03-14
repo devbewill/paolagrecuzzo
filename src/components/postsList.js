@@ -36,11 +36,6 @@ export default () => (
 									html
 								}
 							}
-							abstract {
-								childMarkdownRemark {
-									html
-								}
-							}
 						}
 					}
 				}
@@ -69,7 +64,6 @@ export default () => (
 									day: edge.node.day,
 									month: edge.node.month,
 									year: edge.node.year,
-									abstract: edge.node.abstract.childMarkdownRemark.html,
 									target: target
 								};
 

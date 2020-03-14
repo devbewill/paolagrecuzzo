@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Theme from '../styles/Theme';
-import { Container } from '../styles/styledComponent';
-import Layout from '../components/layout';
 import TextContent from '../components/textContent';
 
 export const query = graphql`
 	query($slug: String!) {
 		contentfulBlogPost(slug: { eq: $slug }) {
 			title
-			publishedDate(fromNow: true)
+			source
+			day: publishedDate(formatString: "DD")
+			month: publishedDate(formatString: "MM")
+			year: publishedDate(formatString: "YY")
+			tag
 			featuredImage {
-				fluid(maxWidth: 1000) {
+				fluid(maxWidth: 1200, quality: 90) {
 					...GatsbyContentfulFluid_withWebp
 				}
 			}
@@ -21,66 +24,120 @@ export const query = graphql`
 					html
 				}
 			}
-			tag
 		}
 	}
 `;
 
+const PostLayout = styled.div`
+	max-width: 60vw;
+	margin: 0  auto;
+
+	.gatsby-image-wrapper {
+		max-height: 400px;
+	}
+
+	.content {
+		padding-top: 2em;
+		h1 {
+			font-size: 4rem;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: -3px;
+			line-height: 0.9;
+		}
+
+
+		p {
+			font-size: 1.2rem;
+			line-height: 1.4;
+			font-weight: 300;
+		}
+
+		.tags {
+			text-transform: uppercase;
+		}
+	}
+
+	@media only screen and (max-width: 550px) {
+		max-width: none;
+
+		.content {
+			margin: 0 auto;
+			max-width: 85vw;
+
+			h1 {
+				font-size: 3rem;
+				letter-spacing: -2px;
+			}
+		}
+	}
+`;
+
+const Navigator = styled.nav`
+	margin: 2em auto 0 auto;
+	font-size: 3em;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+	}
+a {
+	font-weight: 800;
+	color: ${(props) => props.theme.colors.primary};
+	color: #222;
+}
+`;
+
+
 const Post = (props) => {
-	// const options = {
-	// 	renderNode: {
-	// 		'embedded-asset-block': (node) => {
-	// 			const alt = node.data.target.fields.title['en-US'];
-	// 			const url = node.data.target.fields.file['en-US'].url;
-	// 			return <img alt={alt} src={url} />;
-	// 		}
-	// 	}
-	// };
+
 
 	const title = props.data.contentfulBlogPost.title;
-	const publishedDate = props.data.contentfulBlogPost.publishedDate;
 	const body = props.data.contentfulBlogPost.body.childMarkdownRemark.html;
 	const tags = props.data.contentfulBlogPost.tag;
-	// const danger_dom = <div dangerouslySetInnerHTML={{ __html: bodyMD }} />;
-	// const dom = <div>{danger_dom}</div>;
+	const day = props.data.contentfulBlogPost.day;
+	const month = props.data.contentfulBlogPost.month;
+	const year = props.data.contentfulBlogPost.year;
+
 
 	return (
 		<Theme>
-			<Layout>
+			<PostLayout>
 				{props.data.contentfulBlogPost.featuredImage && (
 					<Img fluid={props.data.contentfulBlogPost.featuredImage.fluid} alt="" />
 				)}
-				<Container>
+				<div className="content">
+					<span className="date">{day}.{month}.{year}</span>
+
 					<h1>{title}</h1>
-					<div>{publishedDate}</div>
-					<ul>
+					<ul className="tags">
 						{tags.map((tag, index) => {
 							return <li key={index}>{tag}</li>;
 						})}
 					</ul>
-
 					<TextContent content={body} />
+				</div>
 
-					<nav>
-						<ul>
-							<li>
-								{props.pageContext.previous && (
-									<Link to={`/blog/${props.pageContext.previous.slug}`} rel="prev">
-										prev
+				<Navigator>
+					<ul>
+						<li>
+							{props.pageContext.previous && (
+								<Link to={`/blog/${props.pageContext.previous.slug}`} rel="prev">
+									prev
 									</Link>
-								)}
-							</li>
-							<li>
-								{props.pageContext.next && (
-									<Link to={`/blog/${props.pageContext.next.slug}`} rel="next">
-										next
+							)}
+						</li>
+						<li>
+							{props.pageContext.next && (
+								<Link to={`/blog/${props.pageContext.next.slug}`} rel="next">
+									next
 									</Link>
-								)}
-							</li>
-						</ul>
-					</nav>
-				</Container>
-			</Layout>
+							)}
+						</li>
+					</ul>
+				</Navigator>
+
+			</PostLayout>
 		</Theme>
 	);
 };

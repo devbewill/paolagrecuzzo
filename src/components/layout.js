@@ -26,9 +26,6 @@ const StyledLayout = styled.div`
 		line-height: 1.4;
 		font-weight: 300;
 	}
-
-
-
 `;
 
 const Layout = (props) => {

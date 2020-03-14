@@ -8,7 +8,7 @@ export const Container = styled.div`
 	margin: 0 auto;
 	align-items: center;
 	justify-content: center;
-	max-width: ${(props) => (props.fullwidth ? 'none' : '80vw')};
+	max-width: ${(props) => (props.fullwidth ? 'none' : '50vw')};
 	flex-grow: 1;
 
 	@media only screen and (max-width: 600px) {
