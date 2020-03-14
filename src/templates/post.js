@@ -148,8 +148,10 @@ const Post = (props) => {
 						})}
 					</ul>
 					<TextContent content={body} />
+					{source && (
+						<a className="source" href={source}>Vai alla fonte</a>
+					)}
 
-					<a className="source" href={source}>Vai alla fonte</a>
 				</div>
 
 				<Navigator>

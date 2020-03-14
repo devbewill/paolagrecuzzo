@@ -67,11 +67,7 @@ export default () => (
 								target: target
 							};
 
-							return !postProps.externalLink ? (
-								<SinglePostInt key={index} postProps={postProps} />
-							) : (
-									<SinglePostExt key={index} postProps={postProps} />
-								);
+							return <SinglePostExt key={index} postProps={postProps} />
 
 						})}
 					</div>
