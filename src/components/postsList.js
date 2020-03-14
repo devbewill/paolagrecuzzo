@@ -50,31 +50,29 @@ export default () => (
 					</h2> */}
 					<div className="postContainer">
 						{data.allContentfulBlogPost.edges.map((edge, index) => {
-							if (index < 9) {
-								let target, postProps;
-								edge.node.source ? (target = edge.node.source) : (target = `/blog/${edge.node.slug}`);
 
-								postProps = {
-									slug: `/blog/${edge.node.slug}`,
-									imgPost: edge.node.featuredImage.fluid.src,
-									externalLink: edge.node.source,
-									tags: edge.node.tag,
-									title: edge.node.title,
-									body: edge.node.body.childMarkdownRemark.html,
-									day: edge.node.day,
-									month: edge.node.month,
-									year: edge.node.year,
-									target: target
-								};
+							let target, postProps;
+							edge.node.source ? (target = edge.node.source) : (target = `/blog/${edge.node.slug}`);
 
-								return !postProps.externalLink ? (
-									<SinglePostInt key={index} postProps={postProps} />
-								) : (
-										<SinglePostExt key={index} postProps={postProps} />
-									);
-							} else {
-								return null;
-							}
+							postProps = {
+								slug: `/blog/${edge.node.slug}`,
+								imgPost: edge.node.featuredImage.fluid.src,
+								externalLink: edge.node.source,
+								tags: edge.node.tag,
+								title: edge.node.title,
+								body: edge.node.body.childMarkdownRemark.html,
+								day: edge.node.day,
+								month: edge.node.month,
+								year: edge.node.year,
+								target: target
+							};
+
+							return !postProps.externalLink ? (
+								<SinglePostInt key={index} postProps={postProps} />
+							) : (
+									<SinglePostExt key={index} postProps={postProps} />
+								);
+
 						})}
 					</div>
 				</PostsSection>
