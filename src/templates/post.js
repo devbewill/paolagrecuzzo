@@ -86,7 +86,7 @@ const PostLayout = styled.div`
 `;
 
 const Navigator = styled.nav`
-	margin: 2em auto 0 auto;
+	margin: 1em auto 0 auto;
 	font-size: 3em;
 
 	ul {
@@ -109,7 +109,13 @@ display: block;
 background-color: black;
 /* background-color: ${(props) => props.theme.colors.primary}; */
 
+@media only screen and (max-width: 550px) {
+mask-size: 10vw 10vw;
+height: 10vw;
+width: 10vw;
+margin: 0 0.5em;
 }
+
 `;
 
 const Post = (props) => {
