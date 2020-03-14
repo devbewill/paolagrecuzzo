@@ -51,9 +51,6 @@ const Navbar = styled.header`
 		}
 	}
 
-	@media only screen and (max-width: 550px) {
-		padding: 1rem 0;
-	}
 `;
 
 

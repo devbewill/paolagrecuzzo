@@ -37,7 +37,7 @@ const Intro = () => {
 
 
 		@media only screen and (max-width: 600px) {
-			padding-top: 55vh;
+
 			h1 {
 				font-size: 3.5rem;
 				letter-spacing: -3px;
