@@ -1,80 +1,74 @@
 import React from 'react';
+import { Img, Link } from 'gatsby';
+import avatar from '../images/avatar.jpeg'
 import styled from 'styled-components';
 
 const Intro = () => {
 	const IntroSection = styled.section`
-		height: 15rem;
+		display: flex;
+		align-items: center;
+		height: 100vh;
 		position: relative;
+		background: url(${avatar}) no-repeat;
+		background-size: 75%;
+		background-position: right 10vh;
 
-		.infos {
-			position: fixed;
-			left: 0.5em;
-			top: 84vh;
-			transform: rotate(-90deg);
-			transform-origin: left top 0;
-			font-size: 0.7rem;
-			display: block;
-		}
+		.homeMenu {
+			padding-left: 5em;
 
-		.avatar {
-			position: absolute;
-			right: 0;
-			top: 25vh;
-			width: 20vw;
-		}
-
-		p {
-			max-width: 45vw;
-			margin-top: 0.5em;
-		}
-
-		.underline {
-			display: inline-block;
-			color: ${(props) => props.theme.colors.primary};
-			/* border-bottom: 0.2em solid ${(props) => props.theme.colors.primary}; */
-			line-height: 0.5;
+			ul { margin-top: 4em;}
 		}
 
 
 		@media only screen and (max-width: 600px) {
 
-			h1 {
-				font-size: 3.5rem;
-				letter-spacing: -3px;
-			}
-
-			h2 {
-				font-size: 2.5rem;
-			}
-
-			p {
-				max-width:90vw;
-				font-size: 0.95rem
-			}
-
-			.infos {
-				padding-top: 0;
-				position: static;
-				font-size: 0.8rem;
-			}
-
-			.underline {
-				background-position-y: calc(100% - 6px);
-			}
 		}
+
+	`;
+
+	const HeroLink = styled(Link)`
+		display: block;
+		color: #111;
+		font-family: 'Playfair Display';
+		font-size: 5.6rem;
+		line-height: 1.1;
+		font-weight: 700;
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			color: ${(props) => props.theme.colors.primary};
+		}
+		
+	`;
+
+	const StyledLink = styled(Link)`
+		display: inline-block;
+		text-transform: uppercase;
+		line-height: 1;
+		color: #111;
+		transition: all 0.3s linear;
+		margin-right: 3em;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom: 2px solid #000;
+		}
+		
 	`;
 
 	return (
 		<IntroSection>
-			{/* <span className="infos">Stefano Perelli __ Product Designer</span>
-			<h1>
-				Solving<br /> problems <br />with <span className="underline">design </span>
-			</h1>
-			<p>
-				I love figuring out digital solutions to complex challenges and simplifying it to make a positive
-				impact.
-			</p> */}
-			<div className="avatar">{/* <Img fluid={data.avatar.childImageSharp.fluid} /> */}</div>
+			<div className="homeMenu">
+				<HeroLink to="">I'm</HeroLink>
+				<HeroLink to="">Designing</HeroLink>
+				<HeroLink to="">My story</HeroLink>
+				<ul>
+					<li>
+						<StyledLink to="">Works</StyledLink>
+						<StyledLink to="./blog">Blog</StyledLink>
+					</li>
+				</ul>
+			</div>
 		</IntroSection>
 	);
 };
