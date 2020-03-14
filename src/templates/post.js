@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Theme from '../styles/Theme';
 import TextContent from '../components/textContent';
+import leftArrow from '../images/left.svg'
+import rightArrow from '../images/right.svg'
+
 
 export const query = graphql`
 	query($slug: String!) {
@@ -56,6 +59,15 @@ const PostLayout = styled.div`
 		.tags {
 			text-transform: uppercase;
 		}
+
+		.source {
+			color: #222;
+			display: block;
+			margin: 2em 0;
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-decoration: underline;
+		}
 	}
 
 	@media only screen and (max-width: 550px) {
@@ -80,19 +92,31 @@ const Navigator = styled.nav`
 	ul {
 		display: flex;
 		justify-content: space-between;
+
+		li {margin: 0;}
 	}
-a {
-	font-weight: 800;
-	color: ${(props) => props.theme.colors.primary};
-	color: #222;
-}
+
 `;
 
+
+const GoToPost = styled(Link)`
+mask-image: url(${props => props.arrow});
+mask-size: 3vw 3vw;
+background-size: cover;
+width: 3vw;
+height: 3vw;
+display: block;
+background-color: black;
+/* background-color: ${(props) => props.theme.colors.primary}; */
+
+}
+`;
 
 const Post = (props) => {
 
 
 	const title = props.data.contentfulBlogPost.title;
+	const source = props.data.contentfulBlogPost.source;
 	const body = props.data.contentfulBlogPost.body.childMarkdownRemark.html;
 	const tags = props.data.contentfulBlogPost.tag;
 	const day = props.data.contentfulBlogPost.day;
@@ -116,22 +140,24 @@ const Post = (props) => {
 						})}
 					</ul>
 					<TextContent content={body} />
+
+					<a className="source" href={source}>Vai alla fonte</a>
 				</div>
 
 				<Navigator>
 					<ul>
 						<li>
 							{props.pageContext.previous && (
-								<Link to={`/blog/${props.pageContext.previous.slug}`} rel="prev">
-									prev
-									</Link>
+								<GoToPost arrow={leftArrow} to={`/blog/${props.pageContext.previous.slug}`} rel="prev">
+								</GoToPost>
 							)}
 						</li>
 						<li>
 							{props.pageContext.next && (
-								<Link to={`/blog/${props.pageContext.next.slug}`} rel="next">
-									next
-									</Link>
+								<GoToPost arrow={rightArrow} to={`/blog/${props.pageContext.next.slug}`} rel="next">
+
+
+								</GoToPost>
 							)}
 						</li>
 					</ul>
