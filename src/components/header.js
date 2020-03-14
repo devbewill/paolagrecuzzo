@@ -5,90 +5,67 @@ import styled from 'styled-components';
 const Navbar = styled.header`
 	width: 100%;
 	position: fixed;
-	display: flex;
-	padding: 1em;
+	padding: 0 1em;
 	top: 0;
-	@media only screen and (max-width: 600px) {
+
+	.info {
+		text-align: right;
+		float: right;
+
+		h1 {
+			font-family: 'Italiana';
+			text-transform: uppercase;
+			font-size: 3rem;
+			margin-bottom: 0.2em;
+			
+		}
+
+		p {
+			margin: 0;
+			position: relative;
+			display: inline-block;
+			font-size: 1.9rem;
+			background: #000;
+			font-weight: 100;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			background-repeat: no-repeat;
+			transition: background 0.2s ease-out;
+			white-space: nowrap;
+		}
+
+		span {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 10px;
+				right: -1em;
+				height: 16px;
+				background: ${(props) => props.theme.colors.primary};
+				bottom: -7px;
+				transition: all 0.2s ease-out;
+				}
+		}
+	}
+
+	@media only screen and (max-width: 550px) {
 		padding: 1rem 0;
 	}
 `;
 
-const NavList = styled.ul`
-	width: 100%;
-	justify-content: flex-end;
-	list-style-type: none;
-	display: flex;
-	margin: 0;
 
-	li {
-		margin: 0;
-	}
-
-	li:first-child {
-		flex: auto;
-
-		a {
-			color: ${(props) => props.theme.colors.primary};
-			font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-			font-weight: 900;
-			letter-spacing: -2px;
-			font-size: 1.5rem;
-			display: inline-block;
-			margin-lefT: 0.7rem;
-
-			&.active {
-				padding-bottom: 0;
-				border-bottom: none;
-			}
-		}
-	}
-
-	a {
-		text-decoration: none;
-		font-size: 0.6rem;
-		margin: 0 0.7rem 0 0;
-		color: #222;
-		font-weight: 700;
-		text-transform: uppercase;
-
-		&.active {
-			border-bottom: 3px solid ${(props) => props.theme.colors.primary};
-		}
-	}
-
-	@media only screen and (max-width: 600px) {
-		a {
-			font-size: 0.8rem;
-		}
-	}
-`;
 
 const Header = () => {
 	return (
 		<Navbar>
-			<NavList>
-				<li>
-					<Link to="/" activeClassName="active">
-						SP
-					</Link>
-				</li>
-				{/* <li>
-					<Link to="/about" activeClassName="active">
-						About
-					</Link>
-				</li> */}
-				{/* <li>
-					<Link to="/portfolio" activeClassName="active">
-						works
-					</Link>
-				</li> */}
-				{/* <li>
-					<Link to="/blog" activeClassName="active">
-						words
-					</Link>
-				</li> */}
-			</NavList>
-		</Navbar>
+			<div className="info">
+				<h1>Paola <br></br>Grecuzzo</h1>
+				<span><p>content designer</p></span>
+			</div>
+
+		</Navbar >
 	);
 };
 

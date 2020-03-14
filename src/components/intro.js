@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Intro = () => {
 	const IntroSection = styled.section`
-		padding-top: 45vh;
+		height: 15rem;
 		position: relative;
 
 		.infos {
@@ -66,14 +66,14 @@ const Intro = () => {
 
 	return (
 		<IntroSection>
-			<span className="infos">Stefano Perelli __ Product Designer</span>
+			{/* <span className="infos">Stefano Perelli __ Product Designer</span>
 			<h1>
 				Solving<br /> problems <br />with <span className="underline">design </span>
 			</h1>
 			<p>
 				I love figuring out digital solutions to complex challenges and simplifying it to make a positive
 				impact.
-			</p>
+			</p> */}
 			<div className="avatar">{/* <Img fluid={data.avatar.childImageSharp.fluid} /> */}</div>
 		</IntroSection>
 	);

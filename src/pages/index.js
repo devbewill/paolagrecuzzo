@@ -17,7 +17,8 @@ const IndexPage = (props) => {
 			<Layout>
 				{/* <Container> */}
 				<Head title="Home" />
-				{/* <Intro />
+				<Intro />
+				{/*
 
 					<Quote />
 					<section className="knowhow">

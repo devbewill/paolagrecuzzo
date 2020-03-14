@@ -31,7 +31,7 @@ const StyledLayout = styled.div`
 const Layout = (props) => {
 	return (
 		<StyledLayout>
-			{/* <Header /> */}
+			<Header />
 			{props.children}
 			{/* <Footer /> */}
 		</StyledLayout>

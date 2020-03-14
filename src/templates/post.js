@@ -6,7 +6,7 @@ import Theme from '../styles/Theme';
 import TextContent from '../components/textContent';
 import leftArrow from '../images/left.svg'
 import rightArrow from '../images/right.svg'
-
+import Header from '../components/header'
 
 export const query = graphql`
 	query($slug: String!) {
@@ -33,7 +33,7 @@ export const query = graphql`
 
 const PostLayout = styled.div`
 	max-width: 60vw;
-	margin: 0  auto;
+	margin: 15rem auto 3rem auto;
 
 	.gatsby-image-wrapper {
 		max-height: 400px;
@@ -102,9 +102,10 @@ const Navigator = styled.nav`
 const GoToPost = styled(Link)`
 mask-image: url(${props => props.arrow});
 mask-size: 3vw 3vw;
+mask-repeat: no-repeat;
 background-size: cover;
-width: 3vw;
-height: 3vw;
+width: 9vw;
+height: 9vw;
 display: block;
 background-color: black;
 /* background-color: ${(props) => props.theme.colors.primary}; */
@@ -132,6 +133,7 @@ const Post = (props) => {
 
 	return (
 		<Theme>
+			<Header></Header>
 			<PostLayout>
 				{props.data.contentfulBlogPost.featuredImage && (
 					<Img fluid={props.data.contentfulBlogPost.featuredImage.fluid} alt="" />
