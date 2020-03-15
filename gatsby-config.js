@@ -48,7 +48,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Playfair Display\:400,700,900`, `Gothic A1\:100,300,400,700`, `Italiana`],
+				fonts: [`Playfair Display\:400,700,900`, `Gothic A1\:100,300,400,700,800,900`, `Italiana`],
 				display: 'swap'
 			}
 		},

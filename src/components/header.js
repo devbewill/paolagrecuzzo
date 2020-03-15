@@ -14,7 +14,7 @@ const Navbar = styled.header`
 
 	.info {
 		text-align: right;
-		float: right;
+		padding: 0 5px;
 
 		h1 {
 			font-family: 'Italiana';

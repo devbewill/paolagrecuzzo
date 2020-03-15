@@ -30,7 +30,7 @@ const Intro = () => {
 			right: 0;
 			background: url(${avatar}) no-repeat;
 			background-size: 75%;
-			background-position: right 7vh;
+			background-position: right calc(100% - 2vh);
 		}
 
 
@@ -38,7 +38,7 @@ const Intro = () => {
 			height: 95vh;
 			.overlayImg {
 			background-size: 153%;
-    		background-position: -1vw calc(100% - 5vh);
+    		background-position: -1vw calc(100% - 3vh);
 			}
 
 			.homeMenu {

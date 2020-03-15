@@ -10,8 +10,9 @@ const Footer = () => {
 
 
 		h2 {
-			font-size: 3rem;
-			font-weight: 800;
+			font-family: "Gothic A1", sans-serif;
+			font-size: 3.3rem;
+			font-weight: 900;
 			line-height: 1;
 		}
 
