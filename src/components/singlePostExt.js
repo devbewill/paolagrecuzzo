@@ -149,7 +149,7 @@ const SinglePostExt = ({ postProps }) => {
 	`;
 
 	return (
-		<StyledPost>
+		<StyledPost data-sal="slide-up" data-sal-duration="800">
 			<div className="head">
 				<div className="title">
 					<span className="date">{postProps.day}.{postProps.month}.{postProps.year}</span>

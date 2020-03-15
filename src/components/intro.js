@@ -73,13 +73,13 @@ const Intro = () => {
 	return (
 		<IntroSection>
 			<div className="homeMenu">
-				<HeroLink to="">I'm</HeroLink>
-				<HeroLink to="">Designing</HeroLink>
-				<HeroLink to="">My story</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/">I'm</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/">Designing</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/">My story</HeroLink>
 				<ul>
 					<li>
 						<StyledLink to="">Works</StyledLink>
-						<StyledLink to="./blog">Blog</StyledLink>
+						<StyledLink to="/blog">Blog</StyledLink>
 					</li>
 				</ul>
 			</div>
