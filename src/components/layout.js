@@ -31,7 +31,7 @@ const Layout = (props) => {
 		<StyledLayout>
 			<Header />
 			{props.children}
-			{/* <Footer /> */}
+			<Footer />
 		</StyledLayout>
 	);
 };

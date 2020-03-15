@@ -20,8 +20,16 @@ const Intro = () => {
 		}
 
 
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 550px) {
+			height: 95vh;
+			background-size: 153%;
+    		background-position: 2% bottom;
+			.homeMenu {
+				padding-top: 2em;
+				padding-left: 1em;
 
+				ul {margin-top: 7em}
+			}
 		}
 
 	`;
@@ -38,6 +46,12 @@ const Intro = () => {
 		&:hover {
 			color: ${(props) => props.theme.colors.primary};
 		}
+
+
+		@media only screen and (max-width: 550px) {
+			font-size: 4.2rem;
+		}
+
 		
 	`;
 
