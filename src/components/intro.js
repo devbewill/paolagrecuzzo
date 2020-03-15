@@ -108,7 +108,7 @@ const Intro = () => {
 
 			</div>
 			<div className="homeMenu">
-				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/">I'm</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/bio">I'm</HeroLink>
 				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/">Designing</HeroLink>
 				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/">My story</HeroLink>
 			</div>
