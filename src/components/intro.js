@@ -7,7 +7,7 @@ const Intro = () => {
 	const IntroSection = styled.section`
 		display: flex;
 		align-items: center;
-		height: 100vh;
+		height: 96vh;
 		position: relative;
 		background: url(${avatar}) no-repeat;
 		background-size: 75%;

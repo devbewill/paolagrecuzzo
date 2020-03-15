@@ -4,30 +4,27 @@ import styled from 'styled-components';
 
 const Footer = () => {
 	const StyledFooter = styled.footer`
+		min-height: 400px;
 		background: ${(props) => props.theme.colors.primary};
-		padding: 3em 20vw 0.5em 20vw;
-		color: #fff;
+		padding: 5em;
+
 
 		h2 {
-			font-size: 2.5rem;
+			font-size: 3rem;
 			font-weight: 800;
 			line-height: 1;
 		}
 
 		ul {
 			margin: 0;
-			margin-top: 1em;
+			margin-top: 6em;
 			list-style-type: none;
 			font-weight: 300;
-			font-size: 2rem;
+			font-size: 1rem;
 
 			li {
 				display: inline-block;
-				padding: 0.1em;
-
-				&:nth-child(-n + 2):after {
-					content: " /";
-				}
+				padding-right: 5em;
 
 				a {
 					color: inherit;
@@ -41,13 +38,6 @@ const Footer = () => {
 			}
 		}
 
-		.credits {
-			margin: 0;
-
-			font-size: 0.65rem;
-			font-weight: bold;
-			padding-top: 4em;
-		}
 
 		@media only screen and (max-width: 600px) {
 			padding: 2em 1em;
@@ -59,6 +49,8 @@ const Footer = () => {
 
 			ul {
 				font-size: 1.3rem;
+
+				li {display: block;}
 			}
 		}
 	`;
@@ -76,29 +68,31 @@ const Footer = () => {
 	return (
 		<StyledFooter>
 			<h2>
-				Hey!<br />I'm always up for new challenge 💪
+				Say hello!
 			</h2>
 			<ul className="contatcs">
 				<li>
-					<a href="https://www.linkedin.com/in/stefanoperelli/" target="_blank" rel="noopener noreferrer">
+					<a href="mailto:paolagrecuzzo@gmail.com" target="_blank" rel="noopener noreferrer">
+						Mail
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/paola-grecuzzo-09071984/" target="_blank" rel="noopener noreferrer">
 						Linkedin
 					</a>
 				</li>
 				<li>
-					<a href="https://www.instagram.com/ste.esse" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.instagram.com/paol_p_etta" target="_blank" rel="noopener noreferrer">
 						Instagram
 					</a>
 				</li>
 				<li>
-					<a href="mailto:sedprc@gmail.com" target="_blank" rel="noopener noreferrer">
-						Mail
+					<a href="https://www.facebook.com/paola.grecuzzo" target="_blank" rel="noopener noreferrer">
+						Facebook
 					</a>
 				</li>
-			</ul>
 
-			<p className="credits">
-				{data.site.siteMetadata.title} . made with GatsbyJs & hosted on Netlify <br />
-			</p>
+			</ul>
 		</StyledFooter>
 	);
 };
