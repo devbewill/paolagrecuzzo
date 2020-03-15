@@ -45,7 +45,7 @@ const Intro = () => {
 
 			.overlayImg {
 			background-size: 153%;
-    		background-position: -1vw calc(100% - 1vh);
+    		background-position: -1vw bottom;
 			}
 
 			.homeMenu {
