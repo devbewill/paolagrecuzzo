@@ -14,32 +14,35 @@ const Navbar = styled.header`
 
 	.info {
 		text-align: right;
-		padding: 0 5px;
+		padding: 0.6em;
 
 		h1 {
 			font-family: 'Italiana';
 			text-transform: uppercase;
-			font-size: 3rem;
+			line-height: 0.9;
+			font-size: 2.7rem;
 			margin: 0.2em 0;
 			
 		}
 
 		p {
 			margin: 0;
+			padding-top: 0.5em;
 			position: relative;
 			display: inline-block;
-			font-size: 1.9rem;
-			background: #000;
-			font-weight: 100;
+			font-size: 1.6rem;
+			font-weight: 600;
+			line-height: 1.2;	
+			/* background: #000;
 			background-clip: text;
 			-webkit-background-clip: text;
 			color: transparent;
 			background-repeat: no-repeat;
 			transition: background 0.2s ease-out;
-			white-space: nowrap;
+			white-space: nowrap; */
 		}
 
-		span {
+		/* span {
 			position: relative;
 			&:before {
 				content: "";
@@ -51,7 +54,7 @@ const Navbar = styled.header`
 				bottom: -7px;
 				transition: all 0.2s ease-out;
 				}
-		}
+		} */
 	}
 
 `;
@@ -64,7 +67,7 @@ const Header = () => {
 			<Navbar>
 				<div className="info">
 					<Link to="/"><h1>Paola <br></br>Grecuzzo</h1></Link>
-					<span><p>content designer</p></span>
+					<span><p>content <br></br>designer</p></span>
 				</div>
 			</Navbar >
 		</Headroom>

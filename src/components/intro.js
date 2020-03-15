@@ -18,7 +18,13 @@ const Intro = () => {
 		.homeMenu {
 			padding-left: 5em;
 
-			ul { margin-top: 4em;}
+			/* ul { margin-top: 4em;} */
+		}
+
+		.pageNavigator {
+			position: absolute;
+			right: 0;
+			bottom: 10vh;
 		}
 
 		.overlayImg {
@@ -36,6 +42,7 @@ const Intro = () => {
 
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
+
 			.overlayImg {
 			background-size: 153%;
     		background-position: -1vw calc(100% - 3vh);
@@ -44,8 +51,11 @@ const Intro = () => {
 			.homeMenu {
 				padding-top: 2em;
 				padding-left: 1em;
+			}
 
-				ul {margin-top: 7em}
+			.pageNavigator {
+				left: 1em;
+				bottom: 6vh
 			}
 		}
 
@@ -55,7 +65,7 @@ const Intro = () => {
 		display: block;
 		color: #111;
 		font-family: 'Playfair Display';
-		font-size: 5.6rem;
+		font-size: 6.8rem;
 		line-height: 1.1;
 		font-weight: 700;
 		transition: all 0.3s ease-in;
@@ -73,16 +83,22 @@ const Intro = () => {
 	`;
 
 	const StyledLink = styled(Link)`
-		display: inline-block;
-		text-transform: uppercase;
+		display: block;
+		text-align: right;
+		font-weight: 600;
+		font-size: 1.3rem;
 		line-height: 1;
+		margin-bottom: 0.7em;
 		color: #111;
 		transition: all 0.3s linear;
-		margin-right: 3em;
 		border-bottom: 1px solid transparent;
 
 		&:hover {
 			border-bottom: 2px solid #000;
+		}
+
+		@media only screen and (max-width: 550px) {
+			text-align: left;
 		}
 		
 	`;
@@ -96,13 +112,13 @@ const Intro = () => {
 				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/">I'm</HeroLink>
 				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/">Designing</HeroLink>
 				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/">My story</HeroLink>
-				<ul>
-					<li>
-						<StyledLink to="">Works</StyledLink>
-						<StyledLink to="/blog">Blog</StyledLink>
-					</li>
-				</ul>
 			</div>
+			<ul className="pageNavigator">
+				<li>
+					<StyledLink to="">works</StyledLink>
+					<StyledLink to="/blog">blog</StyledLink>
+				</li>
+			</ul>
 		</IntroSection>
 	);
 };

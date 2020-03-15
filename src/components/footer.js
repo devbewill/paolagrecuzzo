@@ -6,14 +6,15 @@ const Footer = () => {
 	const StyledFooter = styled.footer`
 		min-height: 400px;
 		background: ${(props) => props.theme.colors.primary};
-		padding: 5em;
+		padding: 6em 5em 5em 5em;
 
 
 		h2 {
 			font-family: "Gothic A1", sans-serif;
-			font-size: 3.3rem;
+			font-size: 3rem;
 			font-weight: 900;
 			line-height: 1;
+			letter-spacing: -1px;
 		}
 
 		ul {
@@ -32,6 +33,9 @@ const Footer = () => {
 					text-decoration: none;
 					transition: all 0.3s linear;
 					border-bottom: 1px solid transparent;
+					font-size: 1.1rem;
+					font-weight: 400;
+					letter-spacing: -1px;
 
 					&:hover {
 						border-bottom: 2px solid #000;
@@ -42,7 +46,7 @@ const Footer = () => {
 
 
 		@media only screen and (max-width: 600px) {
-			padding: 2em 1em;
+			padding: 6em 1em;
 
 			h2 {
 				font-size: 2rem;
@@ -50,6 +54,7 @@ const Footer = () => {
 			}
 
 			ul {
+				margin-top: 4em;
 				font-size: 1.3rem;
 
 				li {display: block;}
