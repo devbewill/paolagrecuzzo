@@ -12,7 +12,7 @@ const BlogPage = (props) => {
 	return (
 		<Theme>
 			<Layout>
-				<Head title="Home" />
+				<Head title="Blog" />
 				<PostsList />
 			</Layout>
 		</Theme>
