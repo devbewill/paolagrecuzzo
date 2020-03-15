@@ -28,6 +28,8 @@ const SinglePostExt = ({ postProps }) => {
 				margin: 0;
 				text-transform: uppercase;
 				font-size: 0.8rem;
+				font-weight: 700;
+				letter-spacing: -1px;
 			}
 		}
 

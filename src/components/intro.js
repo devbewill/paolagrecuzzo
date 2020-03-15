@@ -91,10 +91,9 @@ const Intro = () => {
 		margin-bottom: 0.7em;
 		color: #111;
 		transition: all 0.3s linear;
-		border-bottom: 1px solid transparent;
 
 		&:hover {
-			border-bottom: 2px solid #000;
+			text-decoration: underline;
 		}
 
 		@media only screen and (max-width: 550px) {
