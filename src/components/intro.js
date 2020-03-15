@@ -4,14 +4,16 @@ import avatar from '../images/avatar.jpeg'
 import styled from 'styled-components';
 
 const Intro = () => {
+
 	const IntroSection = styled.section`
+	margin-top: -200px;
 		display: flex;
 		align-items: center;
 		height: 96vh;
 		position: relative;
-		background: url(${avatar}) no-repeat;
+		/* background: url(${avatar}) no-repeat;
 		background-size: 75%;
-		background-position: right 7vh;
+		background-position: right 7vh; */
 
 		.homeMenu {
 			padding-left: 5em;
@@ -19,11 +21,26 @@ const Intro = () => {
 			ul { margin-top: 4em;}
 		}
 
+		.overlayImg {
+			position: fixed;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left:0;
+			right: 0;
+			background: url(${avatar}) no-repeat;
+			background-size: 75%;
+			background-position: right 7vh;
+		}
+
 
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
+			.overlayImg {
 			background-size: 153%;
-    		background-position: 2% bottom;
+    		background-position: -1vw calc(100% - 5vh);
+			}
+
 			.homeMenu {
 				padding-top: 2em;
 				padding-left: 1em;
@@ -72,6 +89,9 @@ const Intro = () => {
 
 	return (
 		<IntroSection>
+			<div className="overlayImg">
+
+			</div>
 			<div className="homeMenu">
 				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/">I'm</HeroLink>
 				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/">Designing</HeroLink>

@@ -5,6 +5,7 @@ import '../styles/index.scss';
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
+	overflow: hidden;
 	h1 {
 		font-size: 4rem;
 		margin: 0;
