@@ -47,6 +47,30 @@ ul {
 	li { display: inline-block; margin: 0 1em 0 0; line-height: 1.8;}
 }
 
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 700ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+
 @media only screen and (max-width: 550px) {
 	html {
 		font-size: 90%;

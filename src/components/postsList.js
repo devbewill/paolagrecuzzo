@@ -6,7 +6,7 @@ import SinglePostExt from './singlePostExt';
 
 const PostsSection = styled.section`
 	.postContainer {
-		margin-top: 50vh;
+		margin-top: 20vh;
 		display: flex;
 		flex-wrap: wrap;
 	}

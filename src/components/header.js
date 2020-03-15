@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Headroom from "react-headroom";
 import styled from 'styled-components';
 
 const Navbar = styled.header`
-	width: 100%;
+	/* width: 100%;
 	position: fixed;
 	padding: 0 1em;
 	top: 0;
-	z-index: 999;
+	z-index: 999; */
+	width: 100%;
+	height: 200px;
 
 	.info {
 		text-align: right;
@@ -57,13 +60,14 @@ const Navbar = styled.header`
 
 const Header = () => {
 	return (
-		<Navbar>
-			<div className="info">
-				<Link to="/"><h1>Paola <br></br>Grecuzzo</h1></Link>
-				<span><p>content designer</p></span>
-			</div>
-
-		</Navbar >
+		<Headroom disableInlineStyles>
+			<Navbar>
+				<div className="info">
+					<Link to="/"><h1>Paola <br></br>Grecuzzo</h1></Link>
+					<span><p>content designer</p></span>
+				</div>
+			</Navbar >
+		</Headroom>
 	);
 };
 
