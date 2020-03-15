@@ -10,7 +10,7 @@ const BioSection = styled.div`
 
     .openerMenu {
         position: relative;
-        top: 25vh;
+        top: 10vh;
         left: 5em;
         width: 50px;
         height: 50px;

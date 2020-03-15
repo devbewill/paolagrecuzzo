@@ -4,8 +4,10 @@ import Headroom from "react-headroom";
 import styled from 'styled-components';
 
 const Navbar = styled.header`
-	width: 100%;
-	height: 200px;
+    width: 50%;
+    height: 200px;
+    margin-right: 0;
+    margin-left: auto;
 
 	.info {
 		text-align: right;
@@ -16,15 +18,14 @@ const Navbar = styled.header`
 			text-transform: uppercase;
 			line-height: 0.9;
 			font-size: 2.7rem;
-			margin: 0.2em 0;
+			margin: 0.2em 0 0.2em auto;
+			max-width: 300px;
 			
 		}
 
 		p {
-			margin: 0;
-			padding-top: 0.5em;
+			padding-top: 0;
 			position: relative;
-			display: inline-block;
 			font-size: 1.6rem;
 			font-weight: 600;
 			line-height: 1.2;	
@@ -42,7 +43,7 @@ const Header = () => {
 			<Navbar>
 				<div className="info">
 					<Link to="/"><h1>Paola <br></br>Grecuzzo</h1></Link>
-					<span><p>content <br></br>designer</p></span>
+					<p>content <br></br>designer</p>
 				</div>
 			</Navbar >
 		</Headroom>
