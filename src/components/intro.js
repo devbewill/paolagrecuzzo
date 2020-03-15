@@ -11,7 +11,7 @@ const Intro = () => {
 		position: relative;
 		background: url(${avatar}) no-repeat;
 		background-size: 75%;
-		background-position: right 10vh;
+		background-position: right 7vh;
 
 		.homeMenu {
 			padding-left: 5em;

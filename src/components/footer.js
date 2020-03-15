@@ -30,9 +30,10 @@ const Footer = () => {
 					color: inherit;
 					text-decoration: none;
 					transition: all 0.3s linear;
+					border-bottom: 1px solid transparent;
 
 					&:hover {
-						color: #222;
+						border-bottom: 2px solid #000;
 					}
 				}
 			}
