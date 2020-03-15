@@ -59,7 +59,7 @@ const Header = () => {
 	return (
 		<Navbar>
 			<div className="info">
-				<h1>Paola <br></br>Grecuzzo</h1>
+				<Link to="./"><h1>Paola <br></br>Grecuzzo</h1></Link>
 				<span><p>content designer</p></span>
 			</div>
 
