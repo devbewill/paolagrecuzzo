@@ -31,16 +31,17 @@ const BioSection = styled.div`
         cursor: pointer;
 
         .menu {
+            opacity: 0;
             position: absolute;
             overflow: hidden;
             top: -50px;
-            height: 0;
+            height: 480px;
             width: 350px;
             background: #000;
-            transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in-out;
 
             &.visible {
-                height: 480px;
+                opacity: 1
             }
         }
 

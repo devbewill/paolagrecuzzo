@@ -4,7 +4,6 @@ import Headroom from "react-headroom";
 import styled from 'styled-components';
 
 const Navbar = styled.header`
-    width: 50%;
     height: 200px;
     margin-right: 0;
     margin-left: auto;

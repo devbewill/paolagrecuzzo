@@ -35,8 +35,8 @@ const Intro = () => {
 			left:0;
 			right: 0;
 			background: url(${avatar}) no-repeat;
-			background-size: 75%;
-			background-position: right calc(100% - 2vh);
+			background-size: 77%;
+			background-position: right top;
 		}
 
 
