@@ -5,34 +5,49 @@ const Timeline = () => {
 
 	const history = [
 		{
-			year: 'present',
-			role: 'Product Designer',
-			company: 'PAX Italia'
+			year: '2019',
+			role: 'Responsabile WA MAG',
+			company: ''
 		},
 		{
-			year: '2018',
-			role: 'UX Designer',
-			company: 'PAX Italia'
+			year: '2017',
+			role: 'Senior Content Designer',
+			company: 'Digital Entity (Ntt Data Design Studio)'
 		},
 		{
-			year: '2016',
-			role: 'Fullstack Designer',
-			company: 'Digital Entity - NTTDATA'
+			year: '2015',
+			role: 'Co-founder e Creative Director',
+			company: 'Cubilia'
 		},
 		{
 			year: '2013',
-			role: 'Frontend Developer',
-			company: 'Digital Entity - NTTDATA'
-		},
-		{
-			year: '2012',
-			role: 'Owner',
-			company: 'skillybiz.com'
+			role: 'Creative Director',
+			company: 'Erremme Associati'
 		},
 		{
 			year: '2009',
-			role: 'Web Designer',
-			company: 'Freelance'
+			role: 'Copywriter',
+			company: 'Erremme Associati'
+		},
+		{
+			year: '2008',
+			role: 'Laurea in Comunicazione Editoriale',
+			company: '110/110 cum laude'
+		},
+		{
+			year: '2007',
+			role: 'Stage all’Istituto Italiano di Cultura',
+			company: 'Ambasciata italiana in Croazia'
+		},
+		{
+			year: '2006',
+			role: 'Laurea in Lettere moderne',
+			company: '110/110 cum laude'
+		},
+		{
+			year: '1984',
+			role: 'Buongiorno mondo!',
+			company: ''
 		}
 	];
 
@@ -94,7 +109,7 @@ const Timeline = () => {
 					position: relative;
 					width: 100%;
 					float: right;
-					padding: 60px 20px;
+					padding: 90px 20px;
 					clear: both;
 					text-align: left;
 					margin-top: -50px;
@@ -131,7 +146,7 @@ const Timeline = () => {
 							height: 18px;
 							background-color: #000;
 							border-radius: 100%;
-							top: 25px;
+							top: 15px;
 							right: calc(100% + 25px);
 							z-index: 1000;
 
@@ -160,7 +175,7 @@ const Timeline = () => {
 						@media only screen and (min-width: 900px) {
 							position: absolute;
 							opacity: 0;
-							top: 50px;
+							top: 85px;
 							right: 27em;
 							min-width: 230px;
 							text-align: right;
