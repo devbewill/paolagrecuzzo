@@ -11,7 +11,7 @@ const PostsSection = styled.section`
 		flex-wrap: wrap;
 
 	@media only screen and (max-width: 550px) {
-		margin-top: 15vh
+		margin-top: 10vh
 	}
 	}
 `;

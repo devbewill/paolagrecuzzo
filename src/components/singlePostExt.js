@@ -9,7 +9,14 @@ const SinglePostExt = ({ postProps }) => {
 	};
 
 	const StyledPost = styled.div`
-		margin: 0 0 10em 0;
+		margin: 0 0 15em 0;
+
+		p{
+			font-weight: 400;
+			letter-spacing: -1px;
+			font-size: 1.1rem;
+			line-height: 1.7;
+		}
 		
 		.head {
 			display: flex;
@@ -89,12 +96,6 @@ const SinglePostExt = ({ postProps }) => {
 
 		@media only screen and (max-width: 550px) {
 			margin-bottom: 2em;
-			p{
-				font-weight: 400;
-				letter-spacing: -1px;
-				font-size: 1.1rem;
-				line-height: 1.7;
-			}
 
 			.head { 
 				flex-flow: column;
