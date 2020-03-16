@@ -5,11 +5,6 @@ const Timeline = () => {
 
 	const history = [
 		{
-			year: '2019',
-			role: 'Responsabile WA MAG',
-			company: ''
-		},
-		{
 			year: '2017',
 			role: 'Senior Content Designer',
 			company: 'Digital Entity (Ntt Data Design Studio)'
@@ -71,7 +66,7 @@ const Timeline = () => {
 				width: 0;
 				position: absolute;
 				pointer-events: none;
-				border: 3px solid #000;
+				border: 3px solid #fff;
 				border-width: 0 0 2px 2px;
 				width: 16px;
 				height: 16px;
@@ -82,6 +77,8 @@ const Timeline = () => {
 
 				@media only screen and (min-width: 900px) {
 					lefT: 50%;
+					border: 3px solid #000;
+					border-width: 0 0 2px 2px;
 				}
 			}
 
@@ -92,9 +89,10 @@ const Timeline = () => {
 				left: 20px;
 				bottom: 0px;
 				width: 2px;
-				background-color: #000;
+				background-color: #fff;
 				@media only screen and (min-width: 900px) {
 					left: 50%;
+					background-color: #000;
 				}
 			} 
 
@@ -109,7 +107,7 @@ const Timeline = () => {
 					position: relative;
 					width: 100%;
 					float: right;
-					padding: 90px 20px;
+					padding: 50px 20px;
 					clear: both;
 					text-align: left;
 					margin-top: -50px;
@@ -122,18 +120,22 @@ const Timeline = () => {
 					
 					@media only screen and (min-width: 900px) {
 						width: calc(50% - 80px);
+						padding: 80px 20px;
 					}
 
 					.title {
-						font-size: 1rem;
+						font-family: 'Gothic A1', sans-serif;
+						font-weight: 900;
+						letter-spacing: -1px;
+						font-size: 1.7rem;
 						line-height: 0.8;
-						padding: 1em;
+						padding-left: 0;
 						position: relative;
 						cursor: pointer;
-						transition: all 0.3s ease-in-out;
+						transition: all 0.2s ease-in-out;
 						
 						&:hover {
-							font-weight: 600;
+							color: ${(props) => props.theme.colors.primary};
 							&:before {
 								background-color: ${(props) => props.theme.colors.primary};
 							}
@@ -158,15 +160,20 @@ const Timeline = () => {
 					.body {
 						transition: all 0.3s linear;
 						p {
-							font-size: 1rem;
+							font-size: 1.3rem;
 							font-weight: 800;
-							margin: 0.2em 0;
+							margin: 0.8em 0 1em;
+							text-transform: uppercase;
+							letter-spacing: -1px;
+							line-height: 1.2;
 
 							span {
 								display: block;
-								font-size: 0.9rem;
-								font-weight: 300;
-								line-height: 0.9;
+								font-size: 1.2rem;
+								font-weight: 400;
+								line-height: 1.5;
+								text-transform: none;
+								letter-spacing: initial;
 							}
 						}
 					}
@@ -175,9 +182,9 @@ const Timeline = () => {
 						@media only screen and (min-width: 900px) {
 							position: absolute;
 							opacity: 0;
-							top: 85px;
+							top: 55px;
 							right: 27em;
-							min-width: 230px;
+							min-width: 330px;
 							text-align: right;
 							.title {
 								&:before {
