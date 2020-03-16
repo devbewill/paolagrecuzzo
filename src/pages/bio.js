@@ -46,9 +46,6 @@ const BioSection = styled.div`
         height: 2.5em;
         overflow: hidden;
     
-        &:hover::before, &:hover::after {
-            background: #fff;
-        }
 
         &::before, &::after {
             content: '';
@@ -58,7 +55,7 @@ const BioSection = styled.div`
             top: 50%;
             left: 0;
             margin-top: -1px;
-            background: ${(props) => props.theme.colors.primary};
+            background: #fff;
         }
         &::before {
             transform: rotate(45deg);
@@ -113,7 +110,7 @@ const BioSection = styled.div`
             }
 
             @media only screen and (max-width: 550px) {
-                padding: 5em 2em;
+                padding: 8em 2em 0 2em;
 
                 .medium-wrapper {
                     margin: 3em 0 5em 0;
