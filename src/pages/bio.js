@@ -97,7 +97,7 @@ const BioSection = styled.div`
                 margin-top: -10vh;
                 background: url(${avatar}) no-repeat;
                 background-size: 187%;
-                background-position: -25vw -6vh;
+                background-position: -25vw bottom;
             }
         }
 
