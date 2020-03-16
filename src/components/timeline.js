@@ -148,7 +148,7 @@ const Timeline = () => {
 							height: 18px;
 							background-color: #000;
 							border-radius: 100%;
-							top: 15px;
+							top: 5px;
 							right: calc(100% + 25px);
 							z-index: 1000;
 
