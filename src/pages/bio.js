@@ -60,7 +60,7 @@ const BioSection = styled.div`
                 left: -1em;
 
                 &.visible {
-                    height: 97vh;
+                    height: 90vh;
                 }
             }
         }
