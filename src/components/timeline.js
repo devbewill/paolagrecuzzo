@@ -27,7 +27,7 @@ const Timeline = () => {
 		{
 			year: '2008',
 			role: 'Laurea in Comunicazione Editoriale',
-			company: '110/110 cum laude'
+			company: ''
 		},
 		{
 			year: '2007',
@@ -37,7 +37,7 @@ const Timeline = () => {
 		{
 			year: '2006',
 			role: 'Laurea in Lettere moderne',
-			company: '110/110 cum laude'
+			company: ''
 		},
 		{
 			year: '1984',

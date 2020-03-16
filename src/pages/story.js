@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const StorySection = styled.div`
     margin-top: -200px;
-    margin-bottom: 5em;
+    margin-bottom: 8em;
     min-height: 100vh;
 
     .content {

@@ -92,6 +92,7 @@ const Intro = () => {
 
 		@media only screen and (max-width: 550px) {
 			font-size: 4.2rem;
+			text-decoration: underline;
 		}
 
 		
