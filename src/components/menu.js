@@ -174,7 +174,7 @@ const Menu = (props) => {
     const [menuVisibility, setMenuVisibility] = useState(true);
 
     return (
-        <FixedMenu>
+        <FixedMenu style={{ left: props.left }}>
             <div className="openerMenu" onClick={() => setMenuVisibility(!menuVisibility)}>
                 <div className={!menuVisibility ? 'menu visible' : 'menu'}>
                     <span className="close">
@@ -185,8 +185,8 @@ const Menu = (props) => {
                         <Link className="hero" to="">Designing</Link>
                         <Link className="hero" to="/story">My story</Link>
                         <div className="medium-wrapper">
-                            <Link className="medium" to="/blog">blog</Link>
                             <Link className="medium" to="">works</Link>
+                            <Link className="medium" to="/blog">blog</Link>
                         </div>
                         <a href="https://www.linkedin.com/in/paola-grecuzzo-09071984/" className="small" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         <a href="https://www.instagram.com/paol_p_etta" className="small" target="_blank" rel="noopener noreferrer">Instagram</a>

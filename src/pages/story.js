@@ -18,7 +18,7 @@ const StorySection = styled.div`
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 6.8rem;
         line-height: 0.8;
     }
 
@@ -29,6 +29,7 @@ const StorySection = styled.div`
         }
 
         h1 {
+            font-size: 5rem;
             padding-bottom: 0.3em;
         }
 

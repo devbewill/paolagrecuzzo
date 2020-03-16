@@ -112,12 +112,18 @@ const Timeline = () => {
 					text-align: left;
 					margin-top: -50px;
 
-							&.visible {
-								.body {
-									opacity: 1;
-								}
-							}
+					&.visible {
+						.body {
+							opacity: 1;
+						}
+					}
 					
+					&:hover {
+						.body {
+							opacity: 1;
+						}
+					}
+
 					@media only screen and (min-width: 900px) {
 						width: calc(50% - 80px);
 						padding: 80px 20px;
