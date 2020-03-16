@@ -9,6 +9,10 @@ const PostsSection = styled.section`
 		margin-top: 20vh;
 		display: flex;
 		flex-wrap: wrap;
+
+	@media only screen and (max-width: 550px) {
+		margin-top: 15vh;
+	}
 	}
 `;
 

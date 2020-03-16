@@ -30,7 +30,7 @@ const Intro = () => {
 			left:0;
 			right: 0;
 			background: url(${avatar}) no-repeat;
-			background-size: 77%;
+			background-size: contain;
 			background-position: right top;
 		}
 
@@ -44,7 +44,7 @@ const Intro = () => {
 			}
 
 			.homeMenu {
-				padding-top: 2em;
+				padding-top: 0;
 				padding-left: 1em;
 			}
 
