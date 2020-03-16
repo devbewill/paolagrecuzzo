@@ -9,15 +9,13 @@ const StyledLayout = styled.div`
 	h1 {
 		font-size: 4rem;
 		margin: 0;
-		font-weight: 800;
-		text-transform: uppercase;
+
 	}
 
 	h2 {
 
 		font-size: 3.5rem;
-		font-weight: 800;
-		padding: 0;
+
 	}
 
 	p {

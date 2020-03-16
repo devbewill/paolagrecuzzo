@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import Theme from '../styles/Theme';
 import styled from 'styled-components';
 
 

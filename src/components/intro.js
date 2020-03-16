@@ -6,19 +6,14 @@ import styled from 'styled-components';
 const Intro = () => {
 
 	const IntroSection = styled.section`
-	margin-top: -200px;
+		margin-top: -200px;
 		display: flex;
 		align-items: center;
 		height: 96vh;
 		position: relative;
-		/* background: url(${avatar}) no-repeat;
-		background-size: 75%;
-		background-position: right 7vh; */
 
 		.homeMenu {
 			padding-left: 5em;
-
-			/* ul { margin-top: 4em;} */
 		}
 
 		.pageNavigator {
