@@ -28,7 +28,7 @@ const BioSection = styled.div`
     }
 
     h1 {
-        font-size: 6.8rem;
+        font-size: 5.8rem;
         line-height: 0.8;
     }
 
