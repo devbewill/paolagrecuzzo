@@ -12,14 +12,14 @@ const BioSection = styled.div`
     min-height: 100vh;
 
     .content {
-        margin: 30vh 0 0 5rem;
+        margin: 30vh 0 10vh 5rem;
         position: relative;
 
         .image {
-            position: absolute;
+            position: fixed;
             z-index: -1;
-            left: 48vw;
-            top: 25vw;
+            left: 65vw;
+            top: 20vw;
             width: 30vw;
             height: 30vw;
             background: url(${face}) no-repeat;
@@ -33,13 +33,13 @@ const BioSection = styled.div`
     }
 
     p {
-        max-width: 40vw;
-        margin: 5vw 0 0 12vw;
+        max-width: 45vw;
+        margin: 2em 0 0 5em; 
+
+       
     }
 
-    p:nth-child(4){
-        margin: 22vw 0 15vw 18vw
-    }
+
 
     @media only screen and (max-width: 550px){
         .content {
@@ -78,15 +78,28 @@ const BioPage = (props) => {
                     <Menu />
                     <div className="content">
                         <h1>I'm</h1>
-                        <p>
-                            Dagli anni 80, nel tentativo di capire l’ostilità verso tecnologie come il nucleare o l’ingegneria genetica, si è sviluppato un corpus di studi sulla  <strong>percezione del rischio</strong>.<br></br>
-                            I fattori che ci influenzano sono molti. La famigliarità ad es. spiega perché, nonostante il numero di vittime, non temiamo rischi a cui siamo assuefatti: incidenti d’auto, inquinamento. Certo, azzardare paragoni fra i rischi è scivoloso. Come mostra la teoria socioculturale, le valutazioni sono influenzate da valori etici e sociali. E poi ogni giorno conviviamo con fonti di rischio che accettiamo in virtù dei benefici che riteniamo di ottenere: no alla produzione di energia elettrica nelle centrali atomiche, sì all’impiego di radiazioni in ospedale.
+                        <p style={{ marginTop: '6em' }}>
+                            Sono nata il 9 luglio, nel bel mezzo di un'estate catanese di sole e d'azzurro.<br></br>
+                            <strong>Annata 1984</strong>, la stessa in cui Apple presenta il primo Mac e in cui Orwell ambienta il romanzo che proprio da quest'anno prende il nome.
                         </p>
                         <div className="image"></div>
                         <p>
-                            Dagli anni 80, nel tentativo di capire l’ostilità verso tecnologie come il nucleare o l’ingegneria genetica, si è sviluppato un corpus di studi sulla  <strong>percezione del rischio</strong>.<br></br>
-                            I fattori che ci influenzano sono molti. La famigliarità ad es. spiega perché, nonostante il numero di vittime, non temiamo rischi a cui siamo assuefatti: incidenti d’auto, inquinamento. Certo, azzardare paragoni fra i rischi è scivoloso. Come mostra la teoria socioculturale, le valutazioni sono influenzate da valori etici e sociali. E poi ogni giorno conviviamo con fonti di rischio che accettiamo in virtù dei benefici che riteniamo di ottenere: no alla produzione di energia elettrica nelle centrali atomiche, sì all’impiego di radiazioni in ospedale.
+                            Nei primi anni di vita non ho fatto molto, ero occupata a pettinare le bambole, cercare di prendere con una fava due piccioni e giocare coll’ego.<br></br>
+                            Conseguita la maturità classica, mi sono iscritta alla facoltà di Lettere presso l'<strong>Università di Catania</strong>. Poi, assecondando la mia natura vagabonda, <strong>ho continuato la mia formazione a Milano</strong> iscrivendomi al Corso di laurea specialistica in Culture e linguaggi per la comunicazione. Il primo anno l’ho dedicato alla memorizzazione del nome dell’indirizzo accademico, nei restanti dodici mesi mi sono impegnata nel disperato tentativo di dimenticarlo. Nel 2008 ho concluso gli studi portando a casa la bellezza di <strong>110 punti di votazione e ben 41964 miglia Alitalia</strong>.
+
                         </p>
+                        <p>La smania di conoscere il mondo mi porta in questi anni in giro per i continenti ad assorbire quante più esperienze possibili; tra queste, uno <strong>stage presso l'Ambasciata italiana in Croazia</strong> a seguito di un concorso nazionale che mi vede prima classificata.</p>
+
+                        <p>Nella piena crisi della old economy, in economy e con molta voglia di new, approdo al mondo del lavoro come <strong>copy</strong> in Erremme Associati per Montblanc, UniCredit, Zurich, Hilton, Santander, Cesvi, De Beers e altri. Qualche anno dopo, sempre in Erremme, passo alla <strong>Direzione Creativa</strong>.<br></br>
+                        Nel 2015 decido di mettere in piedi uno spazio tutto mio <strong>dando vita a Cubilia</strong>, piccola agenzia che lavora per De Beers, Ospedale Niguarda, Platinum Guild, Ente Turismo Langhe.
+                        Più tardi scopro il mondo della consulenza ed entro a far parte del team di <strong>Digital Entity</strong>, studio di design di NTT DATA ITALIA. Qui progetto per Mediaset, Coop, Nexi, Brunello Cucinelli, Enel, Poste Italiane, UniCredit, Conad, Telepass.
+                        </p>
+
+                        <p>Per placare la mia anima gitana mi ritaglio, ogni qualvolta posso, weekend in giro per il mondo, visito mete lontane guidata dalle parole dei miei romanzieri preferiti e mi ostino, senza possibilità di redenzione, a compiere giornalmente <strong>voli d'immaginazione</strong>.</p>
+
+                        <p>Sorrido spesso, disegno durante le riunioni, abuso di carboidrati e serie tv.
+                        Amo le parole, le scarpe, i raggi del sole, i film francesi, la curiosità e <strong>la parmigiana di mamma</strong>.
+                    </p>
                     </div>
 
                 </BioSection>

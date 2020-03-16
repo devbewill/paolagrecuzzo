@@ -181,9 +181,9 @@ const Menu = (props) => {
 
                     </span>
                     <div className="menuContent">
-                        <Link className="hero" to="">I'm</Link>
+                        <Link className="hero" to="/bio">I'm</Link>
                         <Link className="hero" to="">Designing</Link>
-                        <Link className="hero" to="">My story</Link>
+                        <Link className="hero" to="/story">My story</Link>
                         <div className="medium-wrapper">
                             <Link className="medium" to="/blog">blog</Link>
                             <Link className="medium" to="">works</Link>
