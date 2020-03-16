@@ -71,17 +71,10 @@ const BioSection = styled.div`
 
     @media only screen and (max-width: 550px){
         .content {
-            margin: 35vh 0 0 1rem;
+            margin: 35vh 1rem 0 1rem;
 
             .image {
-                position: relative;
-                z-index: -1;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                top: 0vw;
-                width: 75vw;
-                height: 75vw;
+                display: none;
             }
         }
 
@@ -89,7 +82,15 @@ const BioSection = styled.div`
             padding-bottom: 0.3em;
         }
 
-        p { max-width: 80vw; margin-left: 5vw}
+        p,
+        p:nth-child(4),
+        p:nth-child(5),
+        p:nth-child(6),
+        p:nth-child(7),
+        p:nth-child(8) {
+            max-width: none;
+            margin: 3em 0;
+        }
     }
 
 `;
