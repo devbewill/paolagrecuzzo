@@ -29,6 +29,7 @@ const StorySection = styled.div`
         }
 
         h1 {
+            font-size: 5.8rem;
             padding-bottom: 0.3em;
         }
 
