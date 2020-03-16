@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Timeline = () => {
+
 	const history = [
 		{
 			year: 'present',
@@ -37,8 +38,9 @@ const Timeline = () => {
 
 	const TimelineSection = styled.section`
 		.entriesWrapper {
+			padding-top: 5em;
 			position: relative;
-			min-height: 80vh;
+			min-height: 90vh;
 			margin: 0;
 			overflow: hidden;
 
@@ -50,7 +52,7 @@ const Timeline = () => {
 				bottom: 0px;
 				width: 4px;
 				background-color: #000;
-				@media only screen and (min-width: 700px) {
+				@media only screen and (min-width: 900px) {
 					left: 50%;
 				}
 			}
@@ -61,58 +63,58 @@ const Timeline = () => {
 				position: relative;
 				left: -5px;
 
-				@media only screen and (min-width: 700px) {
-					overflow: hidden;
-				}
-
 				.entry {
+					position: relative;
 					width: 100%;
 					float: right;
-					padding: 40px 20px;
+					padding: 60px 20px;
 					clear: both;
 					text-align: left;
-					&:not(:first-child) {
-						margin-top: -60px;
-					}
+					margin-top: -50px;
 
-					&:first-child {
-						.title:before {
-							content: '';
-							position: absolute;
-							background: ${(props) => props.theme.colors.primary};
-							border: 4px solid #000;
-						}
-					}
-
-					@media only screen and (min-width: 700px) {
+							&.visible {
+								.body {
+									opacity: 1;
+								}
+							}
+					
+					@media only screen and (min-width: 900px) {
 						width: calc(50% - 80px);
 					}
 
 					.title {
-						font-size: 0.7rem;
-						color: #a9a9a9;
+						font-size: 1rem;
 						line-height: 0.8;
+						padding: 1em;
 						position: relative;
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+						
+						&:hover {
+							font-weight: 600;
+							&:before {
+								background-color: ${(props) => props.theme.colors.primary};
+							}
+						}
 
 						&:before {
 							content: '';
 							position: absolute;
-							width: 25px;
-							height: 25px;
-							border: 4px solid ${(props) => props.theme.colors.primary};
-							background-color: #fff;
+							width: 18px;
+							height: 18px;
+							background-color: #000;
 							border-radius: 100%;
-							top: 2em;
-							transform: translateY(-50%);
-							right: calc(100% + 22px);
+							top: 25px;
+							right: calc(100% + 25px);
 							z-index: 1000;
 
-							@media only screen and (min-width: 700px) {
-								right: calc(100% + 81px);
+							@media only screen and (min-width: 900px) {
+								right: calc(100% + 84px);
 							}
 						}
 					}
 					.body {
+						transition: all 0.3s linear;
 						p {
 							font-size: 1rem;
 							font-weight: 800;
@@ -127,36 +129,66 @@ const Timeline = () => {
 						}
 					}
 
+					.body {
+						@media only screen and (min-width: 900px) {
+							position: absolute;
+							opacity: 0;
+							top: 50px;
+							right: 27em;
+							min-width: 230px;
+							text-align: right;
+							.title {
+								&:before {
+									left: calc(100% + 98px);
+								}
+								&.big:before {
+									transform: translate(-8px, -50%);
+								}
+							}
+
+							&.visible {
+								opacity: 1;
+							}
+						}
+					}
+
+/* 
 					&:nth-child(2n) {
-						@media only screen and (min-width: 700px) {
+						@media only screen and (min-width: 900px) {
 							text-align: right;
 							float: left;
 							.title {
 								&:before {
-									left: calc(100% + 94px);
+									left: calc(100% + 98px);
 								}
 								&.big:before {
 									transform: translate(-8px, -50%);
 								}
 							}
 						}
-					}
+					} */
 				}
 			}
 		}
 	`;
 
+	const showCurrentItem = (event) => {
+		event.preventDefault();
+		let target = event.target;
+		let parent = target.parentElement;
+		parent.classList.toggle('visible');
+
+
+	}
+
 	return (
 		<TimelineSection>
-			<h2 className="align-right">
-				<span>hi</span>story
-			</h2>
 			<div className="entriesWrapper">
 				<div className="entries">
-					{history.map((job, index) => {
+					{history.slice(0).reverse().map((job, index) => {
 						return (
-							<div key={index} className="entry">
-								<div className="title">{job.year}</div>
+							<div key={index} className="entry" onClick={showCurrentItem}>
+								<a className="title" >{job.year} </a>
 								<div className="body">
 									<p>
 										{job.role}
