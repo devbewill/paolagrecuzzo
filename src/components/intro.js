@@ -1,6 +1,7 @@
 import React from 'react';
 import { Img, Link } from 'gatsby';
 import avatar from '../images/avatar.jpeg'
+import face from '../images/face.jpg';
 import styled from 'styled-components';
 
 const Intro = () => {
@@ -22,24 +23,43 @@ const Intro = () => {
 			bottom: 10vh;
 		}
 
-		.overlayImg {
+		/* .overlayImg {
 			position: fixed;
 			z-index: -1;
-			top: 0;
-			bottom: 0;
-			left:0;
+			top: 22vh;
+			bottom: 4vh;
+			left:48vw;
 			right: 0;
-			background: url(${avatar}) no-repeat;
+			background: url(${face}) no-repeat;
 			background-size: contain;
-			background-position: right top;
+		} */
+
+		.overlayImg {
+			opacity: 0.3;
+			position: fixed;
+			z-index: -1;
+			top: 20vh;
+			bottom: 0;
+			left:65vw;
+			right: 0;
+			background: url(${face}) no-repeat;
+			background-size: cover;
 		}
 
 
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
 
-			.overlayImg {
+			/* .overlayImg {
 			background-size: 153%;
+    		background-position: -1vw bottom;
+			} */
+
+			.overlayImg {
+			opacity: 1;
+			top: 60vh;
+			bottom: 0;
+			left: 45vw;
     		background-position: -1vw bottom;
 			}
 
@@ -99,7 +119,7 @@ const Intro = () => {
 
 	return (
 		<IntroSection>
-			<div className="overlayImg">
+			<div data-sal="slide-left" data-sal-duration="700" className="overlayImg">
 
 			</div>
 			<div className="homeMenu">

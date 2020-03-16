@@ -5,6 +5,7 @@ import Head from '../components/head';
 import Menu from '../components/menu';
 import styled from 'styled-components';
 import face from '../images/face.jpg';
+import avatar from '../images/avatar.jpeg'
 
 
 const BioSection = styled.div`
@@ -15,7 +16,7 @@ const BioSection = styled.div`
         margin: 30vh 0 10vh 5rem;
         position: relative;
 
-        .image {
+        /* .image {
             position: absolute;
             z-index: -1;
             left: 45vw;
@@ -24,11 +25,22 @@ const BioSection = styled.div`
             height: 30vw;
             background: url(${face}) no-repeat;
             background-size: contain;
+        } */
+
+        .image {
+            position: fixed;
+            z-index: -1;
+            top: 10vw;
+            bottom: 0;
+            left: 40vw;
+            right: 0;
+            background: url(${avatar}) no-repeat;
+            background-size: cover;
         }
     }
 
     h1 {
-        font-size: 5.8rem;
+        font-size: 5rem;
         line-height: 0.8;
     }
 
@@ -74,12 +86,22 @@ const BioSection = styled.div`
             margin: 35vh 1rem 0 1rem;
 
             .image {
-                display: none;
+                position: relative;
+                margin: 0;
+                width: auto;
+                min-height: 58vh;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin-top: -10vh;
+                background: url(${avatar}) no-repeat;
+                background-size: 187%;
+                background-position: -25vw -6vh;
             }
         }
 
         h1 {
-            font-size: 5.8rem;
             padding-bottom: 0.3em;
         }
 
@@ -107,12 +129,11 @@ const BioPage = (props) => {
                     <Menu />
                     <div className="content">
                         <h1 data-sal="slide-right" data-sal-duration="600" data-sal-delay="300">I'm</h1>
-                        <div data-sal="zoom-in" data-sal-duration="800" className="image"></div>
                         <p data-sal="slide-up" data-sal-duration="800" style={{ marginTop: '6em' }}>
                             Sono nata il 9 luglio, nel bel mezzo di un'estate catanese di sole e d'azzurro.<br></br>
                             <strong>Annata 1984</strong>, la stessa in cui Apple presenta il primo Mac e in cui Orwell ambienta il romanzo che proprio da quest'anno prende il nome.
                         </p>
-                        <p style={{}} data-sal="slide-up" data-sal-duration="800">
+                        <p data-sal="slide-up" data-sal-duration="800">
                             Nei primi anni di vita non ho fatto molto, ero occupata a pettinare le bambole, cercare di prendere con una fava due piccioni e giocare coll’ego.<br></br>
                             Dopo il liceo mi sono iscritta alla facoltà di Lettere. Poi, assecondando la mia natura vagabonda, <strong>ho continuato la mia formazione a Milano</strong> iscrivendomi al Corso di laurea specialistica in Culture e linguaggi per la comunicazione. Il primo anno l’ho dedicato alla memorizzazione del nome dell’indirizzo accademico, nei restanti dodici mesi mi sono impegnata nel disperato tentativo di dimenticarlo. Nel 2008 ho concluso gli studi portando a casa la bellezza di <strong>110 punti di votazione e ben 41964 miglia Alitalia</strong>.
 
@@ -129,6 +150,7 @@ const BioPage = (props) => {
                         <p data-sal="slide-up" data-sal-duration="800">Sorrido spesso, disegno durante le riunioni, abuso di carboidrati e serie tv.
                         Amo le parole, le scarpe, i raggi del sole, i film francesi, la curiosità e <strong>la parmigiana di mamma</strong>.
                     </p>
+                        <div data-sal="zoom-in" data-sal-duration="800" className="image"></div>
                     </div>
 
                 </BioSection>
