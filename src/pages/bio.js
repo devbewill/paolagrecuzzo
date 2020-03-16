@@ -30,6 +30,46 @@ const BioSection = styled.div`
         border-bottom: 2em solid ${(props) => props.theme.colors.primary};
         border-left: 2em solid transparent;
         cursor: pointer;
+
+        @media only screen and (max-width: 550px) {
+            opacity: 0;
+        }
+        
+    }
+
+    .close {
+        display: none;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        width: 2.5em;
+        height: 2.5em;
+        overflow: hidden;
+    
+        &:hover::before, &:hover::after {
+            background: #fff;
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            background: ${(props) => props.theme.colors.primary};
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        @media only screen and (max-width: 550px) {
+            display: inline-block;
+        }
     }
 
     .openerMenu {
@@ -60,7 +100,7 @@ const BioSection = styled.div`
                 left: -1em;
 
                 &.visible {
-                    height: 90vh;
+                    height: 100vh;
                 }
             }
         }
@@ -153,6 +193,9 @@ const BioPage = (props) => {
                     <div className="fixedMenu">
                         <div className="openerMenu" onClick={() => setMenuVisibility(!menuVisibility)}>
                             <div className={!menuVisibility ? 'menu visible' : 'menu'}>
+                                <span className="close">
+
+                                </span>
                                 <div className="content">
                                     <Link className="hero" to="">I'm</Link>
                                     <Link className="hero" to="">Designing</Link>
@@ -166,6 +209,7 @@ const BioPage = (props) => {
                                     <a href="https://www.facebook.com/paola.grecuzzo" className="small" target="_blank" rel="noopener noreferrer">Facebook</a>
                                 </div>
                                 <div className="closerMenu">
+
 
                                 </div>
                             </div>
