@@ -16,8 +16,8 @@ const BioSection = styled.div`
         left: 5em;
     
         @media only screen and (max-width: 550px) {
-            top: 0;
-            left: 0;
+            top: 1em;
+            left: 1em;
         }
     }
 
@@ -57,10 +57,10 @@ const BioSection = styled.div`
 
             @media only screen and (max-width: 550px) {
                 width: 100vw;
-                left: 0;
+                left: -1em;
 
                 &.visible {
-                    height: 100vh;
+                    height: 97vh;
                 }
             }
         }
