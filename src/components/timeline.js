@@ -145,10 +145,6 @@ const Timeline = () => {
 									transform: translate(-8px, -50%);
 								}
 							}
-
-							&.visible {
-								opacity: 1;
-							}
 						}
 					}
 

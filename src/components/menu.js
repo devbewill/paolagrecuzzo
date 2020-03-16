@@ -96,7 +96,7 @@ const FixedMenu = styled.div`
             }
         }
 
-        .content {
+        .menuContent {
             padding: 2em 1em;
 
             .medium-wrapper {
@@ -180,7 +180,7 @@ const Menu = (props) => {
                     <span className="close">
 
                     </span>
-                    <div className="content">
+                    <div className="menuContent">
                         <Link className="hero" to="">I'm</Link>
                         <Link className="hero" to="">Designing</Link>
                         <Link className="hero" to="">My story</Link>
