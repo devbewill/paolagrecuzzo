@@ -37,25 +37,52 @@ const Timeline = () => {
 	];
 
 	const TimelineSection = styled.section`
+		margin-top: 5em;
+
 		.entriesWrapper {
 			padding-top: 5em;
 			position: relative;
 			min-height: 90vh;
 			margin: 0;
 			overflow: hidden;
-
+			
 			&:before {
+				content: " ";
+				bottom: 0;
+				top: 19px;
+				left: 20px;
+				border: 1px solid transparent;
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border: 3px solid #000;
+				border-width: 0 0 2px 2px;
+				width: 16px;
+				height: 16px;
+				line-height: 0;
+				font-size: 0;
+				transform: rotate(135deg);
+				margin-left: -7px;
+
+				@media only screen and (min-width: 900px) {
+					lefT: 50%;
+				}
+			}
+
+			&:after { 
 				content: '';
 				position: absolute;
-				top: 0;
-				left: 19px;
+				top: 20px;
+				left: 20px;
 				bottom: 0px;
-				width: 4px;
+				width: 2px;
 				background-color: #000;
 				@media only screen and (min-width: 900px) {
 					left: 50%;
 				}
-			}
+			} 
+
 			.entries {
 				width: calc(100% - 80px);
 				max-width: 800px;
@@ -109,7 +136,7 @@ const Timeline = () => {
 							z-index: 1000;
 
 							@media only screen and (min-width: 900px) {
-								right: calc(100% + 84px);
+								right: calc(100% + 85px);
 							}
 						}
 					}
@@ -181,7 +208,7 @@ const Timeline = () => {
 		<TimelineSection>
 			<div className="entriesWrapper">
 				<div className="entries">
-					{history.slice(0).reverse().map((job, index) => {
+					{history.map((job, index) => {
 						return (
 							<div key={index} className="entry" onClick={showCurrentItem}>
 								<a className="title" >{job.year} </a>
