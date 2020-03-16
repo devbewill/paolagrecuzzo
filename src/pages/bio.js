@@ -5,21 +5,17 @@ import Layout from '../components/layout';
 import Head from '../components/head';
 import styled from 'styled-components';
 
-const BioSection = styled.div`
-    margin-top: -200px;;
-    height: 100vh;
+const FixedMenu = styled.div`
+    position: fixed;
+    z-index: 99999;
+    top: 1.3em;
+    left: 5em;
 
-    .fixedMenu {
-        position: fixed;
-        z-index: 99999;
-        top: 1.3em;
-        left: 5em;
-    
-        @media only screen and (max-width: 550px) {
-            top: 1em;
-            left: 1em;
-        }
+    @media only screen and (max-width: 550px) {
+        top: 1em;
+        left: 1em;
     }
+
 
     .closerMenu {
         position: absolute;
@@ -174,6 +170,10 @@ const BioSection = styled.div`
             }
         }
     }
+`;
+const BioSection = styled.div`
+    margin-top: -200px;;
+    height: 100vh;
 
 `;
 
@@ -187,7 +187,7 @@ const BioPage = (props) => {
             <Layout>
                 <Head title="Bio" />
                 <BioSection>
-                    <div className="fixedMenu">
+                    <FixedMenu>
                         <div className="openerMenu" onClick={() => setMenuVisibility(!menuVisibility)}>
                             <div className={!menuVisibility ? 'menu visible' : 'menu'}>
                                 <span className="close">
@@ -211,7 +211,7 @@ const BioPage = (props) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </FixedMenu>
 
                 </BioSection>
             </Layout>
