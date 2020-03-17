@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Theme from '../styles/Theme';
 import Layout from '../components/layout';
-import Head from '../components/head';
+import SEO from '../components/seo';
 import Menu from '../components/menu';
 import styled from 'styled-components';
 import face from '../images/face.jpg';
@@ -125,7 +125,7 @@ const BioPage = (props) => {
     return (
         <Theme>
             <Layout>
-                <Head title="Bio" />
+                <SEO title="Bio" />
                 <BioSection>
                     <Menu />
                     <div className="content">

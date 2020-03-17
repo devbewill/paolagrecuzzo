@@ -10,7 +10,8 @@ const SEO = (props) => {
         siteMetadata {
           title
           description
-          baseUrl
+		  baseUrl
+		  image
         }
       }
     }
@@ -28,10 +29,10 @@ const SEO = (props) => {
 	}
 	const title = props.title || defaults.title;
 	const description = props.description || defaults.description;
-	const url = new URL('/blog/' + props.pathname || '', defaults.baseUrl); //to fix for other page
-	const image = props.image ? new URL(props.image, defaults.baseUrl) : false;
+	const url = new URL(props.pathname || '', defaults.baseUrl);
+	const image = props.image ? new URL(props.image, defaults.baseUrl) : defaults.image;
 
-	console.log(url)
+	console.log(image)
 	return (
 
 		< Helmet >

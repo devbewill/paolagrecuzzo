@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Theme from '../styles/Theme';
 import Layout from '../components/layout';
-import Head from '../components/head';
+import SEO from '../components/seo';
 import Menu from '../components/menu';
 import Timeline from '../components/timeline'
 import styled from 'styled-components';
@@ -42,7 +42,7 @@ const StoryPage = (props) => {
     return (
         <Theme>
             <Layout>
-                <Head title="My story" />
+                <SEO title="my story" />
                 <StorySection>
                     <Menu />
                     <div className="content">

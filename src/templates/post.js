@@ -137,14 +137,13 @@ const Post = (props) => {
 	const year = props.data.contentfulBlogPost.year;
 	const slug = props.data.contentfulBlogPost.slug;
 
-
 	return (
 		<Theme>
 			<SEO
 				title={title}
-				description={title || 'nothin’'}
+				description={title || 'nothin'}
 				image={props.data.contentfulBlogPost.featuredImage.file.url}
-				pathname={slug}
+				pathname={`blog/${slug}`}
 				article
 			/>
 			<Header></Header>

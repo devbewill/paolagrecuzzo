@@ -1,14 +1,14 @@
 import React from 'react';
 import Theme from '../styles/Theme';
 import Layout from '../components/layout';
-import Head from '../components/head';
+import SEO from '../components/seo';
 import Intro from '../components/intro';
 
 const IndexPage = (props) => {
 	return (
 		<Theme>
 			<Layout>
-				<Head title="Home" />
+				<SEO title="home" />
 				<Intro />
 			</Layout>
 		</Theme>
