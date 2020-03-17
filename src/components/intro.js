@@ -62,7 +62,7 @@ const Intro = () => {
 			left: 45vw;
     		background-position: -1vw bottom; */
 			opacity: 1;
-			    bottom: -30px;
+			    top: 60vh;
     right: -55px;
     left: 0;
     background-position: right bottom;
