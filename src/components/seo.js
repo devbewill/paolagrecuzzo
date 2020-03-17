@@ -26,12 +26,12 @@ const SEO = (props) => {
 		console.error('Please set a baseUrl in your site metadata!');
 		return null;
 	}
-
 	const title = props.title || defaults.title;
 	const description = props.description || defaults.description;
-	const url = new URL(props.path || '', defaults.baseUrl);
+	const url = new URL('/blog/' + props.pathname || '', defaults.baseUrl); //to fix for other page
 	const image = props.image ? new URL(props.image, defaults.baseUrl) : false;
 
+	console.log(url)
 	return (
 
 		< Helmet >
