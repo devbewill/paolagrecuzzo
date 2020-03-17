@@ -7,10 +7,11 @@ import TextContent from '../components/textContent';
 import leftArrow from '../images/left.svg'
 import rightArrow from '../images/right.svg'
 import Header from '../components/header'
+import SEO from '../components/SEO';
 
 export const query = graphql`
 	query($slug: String!) {
-		contentfulBlogPost(slug: { eq: $slug }) {
+		post: contentfulBlogPost(slug: { eq: $slug }) {
 			title
 			source
 			day: publishedDate(formatString: "DD")
@@ -119,24 +120,32 @@ margin: 0 0.5em;
 
 `;
 
-const Post = (props) => {
+const Post = ({ data: { post } }, props) => {
 
 
-	const title = props.data.contentfulBlogPost.title;
-	const source = props.data.contentfulBlogPost.source;
-	const body = props.data.contentfulBlogPost.body.childMarkdownRemark.html;
-	const tags = props.data.contentfulBlogPost.tag;
-	const day = props.data.contentfulBlogPost.day;
-	const month = props.data.contentfulBlogPost.month;
-	const year = props.data.contentfulBlogPost.year;
+	const title = post.title;
+	const source = post.source;
+	const body = post.body.childMarkdownRemark.html;
+	const tags = post.tag;
+	const day = post.day;
+	const month = post.month;
+	const year = post.year;
 
 
 	return (
 		<Theme>
+			<SEO
+				title={post.title}
+				description={post.title || post.excerpt || 'nothin’'}
+				image={post.featuredImage.fluid.src}
+				pathname={post.slug}
+				article
+			/>
+
 			<Header></Header>
 			<PostLayout>
-				{props.data.contentfulBlogPost.featuredImage && (
-					<Img fluid={props.data.contentfulBlogPost.featuredImage.fluid} alt="" />
+				{post.featuredImage && (
+					<Img fluid={post.featuredImage.fluid} alt="" />
 				)}
 				<div className="content">
 					<span className="date">{day}.{month}.{year}</span>
@@ -154,7 +163,7 @@ const Post = (props) => {
 
 				</div>
 
-				<Navigator>
+				{/* <Navigator>
 					<ul>
 						<li>
 							{props.pageContext.previous && (
@@ -171,7 +180,7 @@ const Post = (props) => {
 							)}
 						</li>
 					</ul>
-				</Navigator>
+				</Navigator> */}
 
 			</PostLayout>
 		</Theme>

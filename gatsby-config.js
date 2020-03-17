@@ -8,7 +8,9 @@ const path = require('path');
 module.exports = {
 	siteMetadata: {
 		title: 'paolagrecuzzo.com',
-		author: 'Paola Grecuzzo'
+		author: 'Paola Grecuzzo',
+		description: 'Paola Grecuzzo - content designer',
+		baseUrl: '/'
 	},
 	plugins: [
 		{
