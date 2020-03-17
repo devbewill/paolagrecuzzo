@@ -4,15 +4,17 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Theme from '../styles/Theme';
 import TextContent from '../components/textContent';
-import leftArrow from '../images/left.svg'
-import rightArrow from '../images/right.svg'
-import Header from '../components/header'
+import leftArrow from '../images/left.svg';
+import rightArrow from '../images/right.svg';
+import Header from '../components/header';
+import SEO from '../components/seo';
 
 export const query = graphql`
 	query($slug: String!) {
 		contentfulBlogPost(slug: { eq: $slug }) {
 			title
 			source
+			slug
 			day: publishedDate(formatString: "DD")
 			month: publishedDate(formatString: "MM")
 			year: publishedDate(formatString: "YY")
@@ -129,10 +131,18 @@ const Post = (props) => {
 	const day = props.data.contentfulBlogPost.day;
 	const month = props.data.contentfulBlogPost.month;
 	const year = props.data.contentfulBlogPost.year;
+	const slug = props.data.contentfulBlogPost.slug;
 
 
 	return (
 		<Theme>
+			<SEO
+				title={title}
+				description={title || 'nothin’'}
+				image={props.data.contentfulBlogPost.featuredImage.fluid.src}
+				pathname={slug}
+				article
+			/>
 			<Header></Header>
 			<PostLayout>
 				{props.data.contentfulBlogPost.featuredImage && (

@@ -8,7 +8,12 @@ const path = require('path');
 module.exports = {
 	siteMetadata: {
 		title: 'paolagrecuzzo.com',
-		author: 'Paola Grecuzzo'
+		author: 'Paola Grecuzzo',
+		description:
+			"Paola Grecuzzo- Content Designer - Milano",
+		baseUrl: "https://paolagrecuzzo.com", // No trailing slash allowed!
+		image: "/images/face.jpg", // Path to your image you placed in the 'static' folder
+		twitterUsername: "",
 	},
 	plugins: [
 		{
