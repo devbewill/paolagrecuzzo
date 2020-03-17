@@ -56,11 +56,17 @@ const Intro = () => {
 			} */
 
 			.overlayImg {
-			opacity: 1;
+			/* opacity: 1;
 			top: 60vh;
 			bottom: 0;
 			left: 45vw;
-    		background-position: -1vw bottom;
+    		background-position: -1vw bottom; */
+			opacity: 1;
+			    bottom: -30px;
+    right: -55px;
+    left: 0;
+    background-position: right bottom;
+    background-size: 285px;
 			}
 
 			.homeMenu {
