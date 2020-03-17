@@ -23,6 +23,10 @@ export const query = graphql`
 				fluid(maxWidth: 1200, quality: 90) {
 					...GatsbyContentfulFluid_withWebp
 				}
+
+				file{
+					url
+				}
 			}
 			body {
 				childMarkdownRemark {
@@ -139,7 +143,7 @@ const Post = (props) => {
 			<SEO
 				title={title}
 				description={title || 'nothin’'}
-				image={props.data.contentfulBlogPost.featuredImage.fluid.src}
+				image={props.data.contentfulBlogPost.featuredImage.file.url}
 				pathname={slug}
 				article
 			/>

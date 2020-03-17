@@ -19,8 +19,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: 'SP',
-				short_name: 'SP',
+				name: 'Paola Grecuzzo',
+				short_name: 'PG',
 				start_url: '/',
 				background_color: '#fff',
 				theme_color: '#000',
