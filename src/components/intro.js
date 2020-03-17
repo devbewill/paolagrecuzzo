@@ -23,17 +23,6 @@ const Intro = () => {
 			bottom: 10vh;
 		}
 
-		/* .overlayImg {
-			position: fixed;
-			z-index: -1;
-			top: 22vh;
-			bottom: 4vh;
-			left:48vw;
-			right: 0;
-			background: url(${face}) no-repeat;
-			background-size: contain;
-		} */
-
 		.overlayImg {
 			display: block;
 			opacity: 0.3;
@@ -62,11 +51,6 @@ const Intro = () => {
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
 
-			/* .overlayImg {
-			background-size: 153%;
-    		background-position: -1vw bottom;
-			} */
-
 			.overlayImg {
 				display: none;
 				opacity:1;
@@ -90,6 +74,7 @@ const Intro = () => {
 			
 
 			.homeMenu {
+				margin-top: -6vh;
 				padding-top: 0;
 				padding-left: 1em;
 			}
