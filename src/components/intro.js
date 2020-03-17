@@ -35,6 +35,7 @@ const Intro = () => {
 		} */
 
 		.overlayImg {
+			display: block;
 			opacity: 0.3;
 			position: fixed;
 			z-index: -1;
@@ -47,6 +48,17 @@ const Intro = () => {
 		}
 
 
+		.fixedImg {
+			display: none;
+			z-index: -1;
+			position: fixed;
+			max-width: 280px;
+			right: -40px;
+			bottom:-20px;
+
+		}
+
+
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
 
@@ -56,18 +68,26 @@ const Intro = () => {
 			} */
 
 			.overlayImg {
-			/* opacity: 1;
-			top: 60vh;
-			bottom: 0;
-			left: 45vw;
-    		background-position: -1vw bottom; */
-			opacity: 1;
-			    top: 60vh;
-    right: -55px;
-    left: 0;
-    background-position: right bottom;
-    background-size: 285px;
+				display: none;
+				opacity:1;
+				bottom: -30px;
+				right: -55px;
+				left: 0;
+				background-position: right bottom;
+				background-size: 285px;
 			}
+
+			.fixedImg {
+				display: block;
+				z-index: -1;
+				position: fixed;
+				max-width: 280px;
+				right: -40px;
+				bottom:-20px;
+
+			}
+
+			
 
 			.homeMenu {
 				padding-top: 0;
@@ -140,6 +160,7 @@ const Intro = () => {
 					<StyledLink to="/blog">blog</StyledLink>
 				</li>
 			</ul>
+			<img className="fixedImg" src={face} alt="" />
 		</IntroSection>
 	);
 };
