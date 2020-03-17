@@ -7,7 +7,7 @@ const FixedMenu = styled.div`
     position: fixed;
     z-index: 99999;
     top: 1.3em;
-    left: 5em;
+    left: ${props => props.leftPosition || "5em"};
 
     @media only screen and (max-width: 550px) {
         top: 1em;
@@ -174,7 +174,7 @@ const Menu = (props) => {
     const [menuVisibility, setMenuVisibility] = useState(true);
 
     return (
-        <FixedMenu style={{ left: props.left }}>
+        <FixedMenu leftPosition={props.leftPosition}>
             <div className="openerMenu" onClick={() => setMenuVisibility(!menuVisibility)}>
                 <div className={!menuVisibility ? 'menu visible' : 'menu'}>
                     <span className="close">

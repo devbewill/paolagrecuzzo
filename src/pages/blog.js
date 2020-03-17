@@ -14,7 +14,7 @@ const BlogPage = (props) => {
 		<Theme>
 			<Layout>
 				<Head title="Blog" />
-				<Menu left="3em" />
+				<Menu leftPosition="3em" />
 				<PostsList />
 			</Layout>
 		</Theme>
