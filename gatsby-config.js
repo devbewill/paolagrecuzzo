@@ -12,7 +12,7 @@ module.exports = {
 		description:
 			"Paola Grecuzzo- Content Designer - Milano",
 		baseUrl: "https://paolagrecuzzo.com", // No trailing slash allowed!
-		image: "/images/screenshot.png", // Path to your image you placed in the 'static' folder
+		image: "screenshot.png", // Path to your image you placed in the 'static' folder
 		twitterUsername: "",
 	},
 	plugins: [
