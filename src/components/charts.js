@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 const Chart = styled.div`
     display: flex;
-    margin: 1em 5em 10em 5em;
-    max-height: 600px;
+    margin: 1em auto 10em auto;
+    max-height: 430px;
     align-items: flex-end;
+    justify-content: center;
 
     @media only screen and (max-width: 550px) {
         margin: 5em 1em;
@@ -26,6 +27,11 @@ const Chart = styled.div`
 const ChartItem = styled.div`
     display: flex;
     align-items: flex-end;
+
+    &:last-child{
+        flex-direction: row-reverse;
+    }
+    
     
     &.visible {
         .barContainer {
@@ -69,15 +75,15 @@ const ChartItem = styled.div`
 
         .desc {
 
-            font-size: 0.6rem;
-            width: 70px;
+            font-size: 0.7rem;
+            width: 80px;
             position: relative;
 
             &:before {
                 content: '';
                 position: absolute;
                 top: 5px;
-                left: 50%;
+                left: 2.8em;
                 bottom: -25px;
                 width: 1px;
                 background-color: #000;
@@ -92,7 +98,16 @@ const ChartItem = styled.div`
                 right: 0;
                 text-align: center;
             }
+
         }
+
+        @media only screen and (min-width: 560px){
+            margin: 0 3vw;
+            .desc {
+                position: absolute;
+                left: -18px;
+            }                    
+        } 
     }
 
     .text {
@@ -103,7 +118,7 @@ const ChartItem = styled.div`
         
         .content {
             opacity: 0;
-            padding: 0 2em;
+            padding: 0 1em;
             color: transparent;
             transition: opacity 0.3s linear;
             transition-delay: 0.3s;
