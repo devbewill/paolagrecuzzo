@@ -6,7 +6,7 @@ const Footer = () => {
 	const StyledFooter = styled.footer`
 		min-height: 400px;
 		background: ${(props) => props.theme.colors.primary};
-		padding: 6em 5em 5em 5em;
+		padding: 6em 5em 0.3em 5em;
 
 
 		h2 {
@@ -20,6 +20,7 @@ const Footer = () => {
 		ul {
 			margin: 0;
 			margin-top: 6em;
+			margin-bottom: 4em;
 			list-style-type: none;
 			font-weight: 300;
 			font-size: 1rem;
@@ -44,6 +45,21 @@ const Footer = () => {
 			}
 		}
 
+		.credits {
+			font-size: 0.8em;
+			text-align: right;
+			opacity: 0.5;
+			transition: opacity 0.2s ease-in;
+
+			a {
+				font-weight: 600;
+			}
+
+			&:hover {
+				opacity: 1
+			}
+		}
+
 
 		@media only screen and (max-width: 600px) {
 			padding: 6em 1em;
@@ -61,16 +77,6 @@ const Footer = () => {
 			}
 		}
 	`;
-	const data = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					title
-					author
-				}
-			}
-		}
-	`);
 
 	return (
 		<StyledFooter>
@@ -100,6 +106,8 @@ const Footer = () => {
 				</li>
 
 			</ul>
+
+			<div className="credits">* craft with ❤️ by <a href="http://www.stefanoperelli.com" target="_blank">stefanoperelli.com</a>	</div>
 		</StyledFooter>
 	);
 };

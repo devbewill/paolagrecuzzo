@@ -223,7 +223,7 @@ const Charts = (props) => {
 
         <Chart>
             <ChartItem value="50" desc="Ux Writing" color="#30a79d">
-                <div className="barContainer" onClick={showCurrentItem}>
+                <div className="barContainer" onClick={showCurrentItem} >
                     <div className="value">100%</div>
                     <div className="bar"></div>
                     <div className="desc"></div>
