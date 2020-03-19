@@ -9,7 +9,7 @@ const Chart = styled.div`
     align-items: flex-end;
 
     @media only screen and (max-width: 550px) {
-        margin: 1em;
+        margin: 5em 1em;
         max-height: none;
         padding-bottom: 40vh;
     }
@@ -113,18 +113,41 @@ const ChartItem = styled.div`
     @media only screen and (max-width: 550px) {
 
         .barContainer {
+            margin: 0 auto;
+
+            .value {
+                padding: 0.5em;
+            }
             .bar {
-                width: 4vw;
+                width: 6.5vw;
+                margin: 0.5em;
             }
 
+            .desc { 
+                position: absolute;
+                width: 250px;
+                text-transform: uppercase;
+                text-align: left;
+                transform: rotate(-90deg);
+	            transform-origin: 0 0;
+                left: 6vw;
+                color: #fff;
+                
+                }
             .desc:before {
+                display: none;
                 top: -30px;
                 left: 2vw;
+
                 
             }
             .desc:after {
+                font-size: 1rem;
+                font-weight: 800;
+                top: -3vw;
+                left: 2em;
                 text-align: left;
-
+                width: 100%;
             }
         }
 
@@ -132,7 +155,7 @@ const ChartItem = styled.div`
             width: auto;
             position: absolute;
             left: 0;
-            bottom: -8vh;
+            bottom: -22vh;
             .content {
                 padding: 0 1em;
             }
@@ -180,7 +203,7 @@ const Charts = (props) => {
     return (
 
         <Chart>
-            <ChartItem value="50" desc="Ux Writing" color="springgreen">
+            <ChartItem value="50" desc="Ux Writing" color="#30a79d">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
@@ -194,7 +217,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="40" desc="Research" color="orangered">
+            <ChartItem value="40" desc="Research" color="#2383a2">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">80%</div>
                     <div className="bar"></div>
@@ -208,7 +231,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Tone of voice" color="orangered">
+            <ChartItem value="50" desc="Tone of voice" color="#061681">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
@@ -222,7 +245,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="45" desc="Content strategy" color="orangered">
+            <ChartItem value="45" desc="Content strategy" color="#743a88">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">90%</div>
                     <div className="bar"></div>
@@ -236,7 +259,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Storyframes" color="springgreen">
+            <ChartItem value="50" desc="Storyframes" color="#c98e89">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
@@ -250,7 +273,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="40" desc="User test" color="orangered">
+            <ChartItem value="40" desc="User test" color="#c12f29">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">80%</div>
                     <div className="bar"></div>
@@ -264,7 +287,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Information Architecture" color="deeppink">
+            <ChartItem value="50" desc="Information Architecture" color="#79054f">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
@@ -278,7 +301,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="45" desc="Storyboard" color="springgreen">
+            <ChartItem value="45" desc="Storyboard" color="#c12d7e">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">90%</div>
                     <div className="bar"></div>
@@ -292,7 +315,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Copy" color="springgreen">
+            <ChartItem value="50" desc="Copy" color="#2d9ec1">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
