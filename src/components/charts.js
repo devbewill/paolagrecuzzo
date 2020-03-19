@@ -31,6 +31,7 @@ const ChartItem = styled.div`
     display: flex;
     align-items: flex-end;
 
+
     &:last-child{
         flex-direction: row-reverse;
     }
@@ -82,6 +83,9 @@ const ChartItem = styled.div`
             font-size: 0.7rem;
             width: 80px;
             position: relative;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            font-weight: 600;
 
             &:before {
                 content: '';
@@ -174,11 +178,19 @@ const ChartItem = styled.div`
             width: auto;
             position: absolute;
             left: 0;
-            bottom: 6em;
+            bottom: 5.5em;
             .content {
                 padding: 0 1em;
             }
         }
+
+        &:nth-child(4),
+        &:nth-child(7){
+            .text {
+                bottom: 2em;
+            }
+        }
+
 
         &.visible {
 
@@ -264,7 +276,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="45" desc="Content strategy" color="#743a88">
+            <ChartItem value="45" desc="Content Strategy" color="#743a88">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">90%</div>
                     <div className="bar"></div>
@@ -278,7 +290,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Storyframes" color="#c98e89">
+            <ChartItem value="50" desc="Storyframe" color="#c98e89">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>
@@ -306,7 +318,7 @@ const Charts = (props) => {
                     </div>
                 </div>
             </ChartItem>
-            <ChartItem value="50" desc="Information Architecture" color="#79054f">
+            <ChartItem value="50" desc="I.A." color="#79054f">
                 <div className="barContainer" onClick={showCurrentItem}>
                     <div className="value">100%</div>
                     <div className="bar"></div>

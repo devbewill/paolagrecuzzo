@@ -24,7 +24,7 @@ const DesigningSection = styled.div`
 
     p {
         max-width: 45vw;
-        margin: 2em 0 0 5em; 
+        margin: 4em 0 0 5em; 
         font-weight: 400;
         letter-spacing: -1px;
         font-size: 1.1rem;
@@ -60,8 +60,8 @@ const DesigningPage = (props) => {
                 <DesigningSection>
                     <div className="sectionContent">
                         <h1 data-sal="slide-right" data-sal-duration="600" >Designing</h1>
-                        <p data-sal="slide-up" data-sal-duration="800">Il Content Design progetta esperienze (di prodotto o di servizio) iniziando dal contenuto, non dai pixel. Il vantaggio è enorme: il contenuto stesso diventa il materiale di progettazione.<br></br>
-                            È così che utilizzo la scrittura come tecnologia. D’altronde, progettare un flusso è molto simile a scrivere una storia interattiva: il designer è un narratore che guida l'utente da una scena all'altra.</p>
+                        <p data-sal="slide-up" data-sal-duration="800">Il Content Design progetta esperienze (di prodotto o di servizio) iniziando dal contenuto, non dai pixel. Il vantaggio è enorme: il contenuto stesso diventa il <strong>materiale di progettazione</strong>.<br></br><br></br>
+                            È così che utilizzo la scrittura come tecnologia. D’altronde, progettare un flusso è molto simile a scrivere una storia interattiva: <strong>il designer è un narratore</strong> che guida l'utente da una scena all'altra.</p>
                     </div>
                     <Charts></Charts>
 

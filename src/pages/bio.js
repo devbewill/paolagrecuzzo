@@ -55,27 +55,28 @@ const BioSection = styled.div`
 
     p:nth-child(4) {
         margin-top: 4em;
-        margin-left: 10vw;
+
         max-width: 450px;
     }
 
     p:nth-child(5) {
         margin-top: 4em;
-        margin-left: 30vw;
+        margin-left: 15vw;
     }
 
     p:nth-child(6) {
         margin-top: 4em;
-        margin-left: 17vw;
+
     }
 
     p:nth-child(7) {
         margin-top: 4em;
+        margin-bottom: 10em;
     }
 
     p:nth-child(8) {
         margin-top: 4em;
-        margin-left: 30vw;
+
     }
 
 
@@ -141,8 +142,8 @@ const BioPage = (props) => {
                         </p>
                         <p data-sal="slide-up" data-sal-duration="800">La smania di conoscere il mondo mi porta in questi anni in giro per i continenti ad assorbire quante più esperienze possibili; tra queste, uno <strong>stage presso l'Ambasciata italiana in Croazia</strong>.</p>
 
-                        <p data-sal="slide-up" data-sal-duration="800">Nella piena crisi della old economy, in economy e con molta voglia di new, approdo al mondo del lavoro come <strong>copy</strong> in Erremme Associati per Montblanc, UniCredit, Zurich, Hilton, Santander, Cesvi, De Beers e altri. Qualche anno dopo, sempre in Erremme, passo alla <strong>Direzione Creativa</strong>.<br></br>
-                        Nel 2015 decido di mettere in piedi uno spazio tutto mio <strong>dando vita a Cubilia</strong>, piccola agenzia che lavora per De Beers, Ospedale Niguarda, Platinum Guild, Ente Turismo Langhe.
+                        <p data-sal="slide-up" data-sal-duration="800">Nella piena crisi della old economy, in economy e con molta voglia di new, approdo al mondo del lavoro come <strong>copy</strong> in Erremme Associati per Montblanc, UniCredit, Zurich, Hilton, Santander, Cesvi, De Beers e altri. <br></br>Qualche anno dopo, sempre in Erremme, passo alla <strong>Direzione Creativa</strong>.<br></br>
+                        Nel 2015 decido di mettere in piedi uno spazio tutto mio <strong>dando vita a Cubilia</strong>, piccola agenzia che lavora per De Beers, Ospedale Niguarda, Platinum Guild, Ente Turismo Langhe.<br></br>
                         Più tardi scopro il mondo della consulenza ed entro a far parte del team di <strong>Digital Entity</strong>, studio di design di NTT DATA ITALIA. Qui progetto per Mediaset, Coop, Nexi, Brunello Cucinelli, Enel, Poste Italiane, UniCredit, Conad, Telepass.
                         </p>
 
