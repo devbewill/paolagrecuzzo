@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 const Footer = () => {
@@ -107,7 +106,7 @@ const Footer = () => {
 
 			</ul>
 
-			<div className="credits">* craft with ❤️ by <a href="http://www.stefanoperelli.com" target="_blank">stefanoperelli.com</a>	</div>
+			<div className="credits">* craft with <span>❤️</span>	 by <a href="http://www.stefanoperelli.com" target="_blank" rel="noopener noreferrer">stefanoperelli.com</a>	</div>
 		</StyledFooter>
 	);
 };

@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import TextContent from '../components/textContent';
 
 const SinglePostExt = ({ postProps }) => {
-	const cleanUrl = (url) => {
-		let urlCleaned = url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '').split('/')[0];
-		return urlCleaned;
-	};
 
 	const StyledPost = styled.div`
 		margin: 0 0 15em 0;

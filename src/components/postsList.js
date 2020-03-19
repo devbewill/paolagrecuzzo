@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import SinglePostInt from './singlePostInt';
 import SinglePostExt from './singlePostExt';
 
 const PostsSection = styled.section`

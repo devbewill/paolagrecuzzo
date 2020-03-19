@@ -1,6 +1,5 @@
 import React from 'react';
-import { Img, Link } from 'gatsby';
-import avatar from '../images/avatar.jpeg'
+import { Link } from 'gatsby';
 import face from '../images/face.jpg';
 import styled from 'styled-components';
 
