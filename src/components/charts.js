@@ -57,7 +57,7 @@ const ChartItem = styled.div`
         flex-flow: column;
         align-items: flex-end;
         justify-content: center;
-        margin: 0 1.5em;
+        margin: 0 2em;
 
         
         >*{pointer-events: none} /* important for clicking on parent only */
@@ -82,7 +82,8 @@ const ChartItem = styled.div`
 
             font-size: 0.7rem;
             width: 80px;
-            position: relative;
+                            position: absolute;
+                left: -1.7em;
             letter-spacing: -1px;
             text-transform: uppercase;
             font-weight: 600;
@@ -106,16 +107,7 @@ const ChartItem = styled.div`
                 right: 0;
                 text-align: center;
             }
-
         }
-
-        @media only screen and (min-width: 560px){
-            margin: 0 2em;
-            .desc {
-                position: absolute;
-                left: -1.7em;
-            }                    
-        } 
     }
 
     .text {
@@ -231,135 +223,93 @@ const Charts = (props) => {
         }
     }
 
+    const skills = [
+        {
+            name: 'Ux Writing',
+            value: '50',
+            color: '#30a79d',
+            title: 'Ux Writing',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'Research',
+            value: '40',
+            color: '#2383a2',
+            title: 'Research',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'Content Strategy',
+            value: '45',
+            color: '#743a88',
+            title: 'Ux Writing',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'Tone of voice',
+            value: '50',
+            color: '#061681',
+            title: 'Tone of voice',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'Storyframe',
+            value: '50',
+            color: '#c98e89',
+            title: 'Storyframe',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'User test',
+            value: '40',
+            color: '#c12f29',
+            title: 'User test',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'I.A.',
+            value: '50',
+            color: '#79054f',
+            title: 'Information Architecture',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+
+        {
+            name: 'Storyboard',
+            value: '45',
+            color: '#c12d7e',
+            title: 'Storyboard',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        },
+        {
+            name: 'Copy',
+            value: '50',
+            color: '#2d9ec1',
+            title: 'Copy',
+            text: 'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+        }
+    ]
+
+
     return (
 
         <Chart>
-            <ChartItem value="50" desc="Ux Writing" color="#30a79d">
-                <div className="barContainer" onClick={showCurrentItem} >
-                    <div className="value">100%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Ux Writing</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="40" desc="Research" color="#2383a2">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">80%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Research</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="50" desc="Tone of voice" color="#061681">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">100%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Tone of voice</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="45" desc="Content Strategy" color="#743a88">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">90%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Content strategy</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="50" desc="Storyframe" color="#c98e89">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">100%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Storyframes</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="40" desc="User test" color="#c12f29">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">80%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>User test</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="50" desc="I.A." color="#79054f">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">100%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Information Architecture</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="45" desc="Storyboard" color="#c12d7e">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">90%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>titolo</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
-            <ChartItem value="50" desc="Copy" color="#2d9ec1">
-                <div className="barContainer" onClick={showCurrentItem}>
-                    <div className="value">100%</div>
-                    <div className="bar"></div>
-                    <div className="desc"></div>
-                </div>
-                <div className="text">
-                    <div className="content">
-                        <h2>Copy</h2>
-                        Lorem ipsum dolor st amet consectetur, adipisicing elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.
-
-                    </div>
-                </div>
-            </ChartItem>
+            {skills.map((skill, index) => {
+                return (
+                    <ChartItem key={index} value={skill.value} desc={skill.name} color={skill.color}>
+                        <div className="barContainer" onClick={showCurrentItem} >
+                            <div className="bar"></div>
+                            <div className="desc"></div>
+                        </div>
+                        <div className="text">
+                            <div className="content">
+                                <h2>{skill.title}</h2>
+                                {skill.text}
+                            </div>
+                        </div>
+                    </ChartItem>
+                );
+            })}
         </Chart>
 
     );
