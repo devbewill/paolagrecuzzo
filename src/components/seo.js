@@ -31,8 +31,6 @@ const SEO = (props) => {
 	const description = props.description || defaults.description;
 	const url = new URL(props.pathname || '', defaults.baseUrl);
 	const image = props.image ? new URL(props.image, defaults.baseUrl) : defaults.image;
-
-	console.log(image)
 	return (
 
 		< Helmet >

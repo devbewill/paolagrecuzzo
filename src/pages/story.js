@@ -46,7 +46,7 @@ const StoryPage = (props) => {
                 <StorySection>
                     <Menu />
                     <div className="content">
-                        <h1>My story</h1>
+                        <h1 data-sal="slide-right" data-sal-duration="600">My story</h1>
                         <Timeline></Timeline>
                     </div>
 

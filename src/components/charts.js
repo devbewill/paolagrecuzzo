@@ -3,9 +3,12 @@ import styled from 'styled-components';
 
 
 const Chart = styled.div`
+    overflow: hidden;
     display: flex;
-    margin: 1em auto 10em auto;
-    max-height: 400px;
+    position: relative;
+    margin: 3em auto 0 auto;
+    padding-bottom: 5em;
+    max-height: 500px;
     align-items: flex-end;
     justify-content: center;
 
@@ -67,7 +70,7 @@ const ChartItem = styled.div`
         }
 
         .bar {
-            height: ${props => (props.value / 2) || 0}em;
+            height: ${props => (props.value / 2.5) || 0}em;
             border-radius: 1em;
             margin: 0 auto;
             width: 1.5em;
@@ -171,7 +174,7 @@ const ChartItem = styled.div`
             width: auto;
             position: absolute;
             left: 0;
-            bottom: -3em;
+            bottom: 6em;
             .content {
                 padding: 0 1em;
             }
