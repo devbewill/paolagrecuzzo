@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Chart = styled.div`
     display: flex;
     margin: 1em auto 10em auto;
-    max-height: 430px;
+    max-height: 400px;
     align-items: flex-end;
     justify-content: center;
 
@@ -59,6 +59,7 @@ const ChartItem = styled.div`
         >*{pointer-events: none} /* important for clicking on parent only */
         
         .value {
+            display: none;
             font-weight: 800;
             font-size: 0.7rem;
             padding: 1em 0;
@@ -66,10 +67,10 @@ const ChartItem = styled.div`
         }
 
         .bar {
-            height: ${props => props.value || 0}vh;
+            height: ${props => (props.value / 2) || 0}em;
             border-radius: 1em;
             margin: 0 auto;
-            width: 30px;
+            width: 1.5em;
             background: ${props => props.color || 'grey'};
         }
 
@@ -82,9 +83,9 @@ const ChartItem = styled.div`
             &:before {
                 content: '';
                 position: absolute;
-                top: 5px;
-                left: 2.8em;
-                bottom: -25px;
+                top: 8px;
+                left: 2.85em;
+                bottom: -30px;
                 width: 1px;
                 background-color: #000;
             }
@@ -102,10 +103,10 @@ const ChartItem = styled.div`
         }
 
         @media only screen and (min-width: 560px){
-            margin: 0 3vw;
+            margin: 0 2em;
             .desc {
                 position: absolute;
-                left: -18px;
+                left: -1.7em;
             }                    
         } 
     }
@@ -170,7 +171,7 @@ const ChartItem = styled.div`
             width: auto;
             position: absolute;
             left: 0;
-            bottom: -22vh;
+            bottom: -3em;
             .content {
                 padding: 0 1em;
             }
