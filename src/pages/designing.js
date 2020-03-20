@@ -32,6 +32,8 @@ const DesigningSection = styled.div`
     }
 
     @media only screen and (max-width: 550px){
+         margin-bottom: 3em;
+
         .sectionContent {
             margin: 35vh 1rem 0 1rem;
         }

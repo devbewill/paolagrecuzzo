@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 const Chart = styled.div`
-    overflow: hidden;
     display: flex;
     position: relative;
     margin: 3em auto 0 auto;
@@ -11,11 +10,17 @@ const Chart = styled.div`
     max-height: 500px;
     align-items: flex-end;
     justify-content: center;
+    transition: padding 0.2s linear;
 
     @media only screen and (max-width: 550px) {
         margin: 5em 1em;
         max-height: none;
-        padding-bottom: 40vh;
+        padding-bottom: 0;
+
+        &.visible {
+            padding-bottom: 10em;
+        }
+        
     }
 `
 
@@ -149,15 +154,12 @@ const Text = styled.div`
         width: auto;
         position: absolute;
         left: 0;
-        bottom: 8.5em;
+        top: 22em;
 
         .content {
             padding: 0;
-        }
 
-        ${ChartItem}:nth-child(3) &,
-        ${ChartItem}:nth-child(7) & {
-            bottom: 5em;
+            h2 {font-size: 3rem}
         }
 
         ${ChartItem}.visible & {
