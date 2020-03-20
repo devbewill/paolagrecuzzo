@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import face from '../images/face.jpg';
+import { Arrow } from '../styles/styledComponent'
 import styled from 'styled-components';
 
 const Intro = () => {
@@ -84,7 +85,7 @@ const Intro = () => {
 			}
 		}
 
-	`;
+	`
 
 	const HeroLink = styled(Link)`
 		display: block;
@@ -106,7 +107,7 @@ const Intro = () => {
 		}
 
 		
-	`;
+	`
 
 	const StyledLink = styled(Link)`
 		display: block;
@@ -126,7 +127,7 @@ const Intro = () => {
 			text-align: left;
 		}
 		
-	`;
+	`
 
 	return (
 		<IntroSection>
@@ -134,9 +135,15 @@ const Intro = () => {
 
 			</div>
 			<div className="homeMenu">
-				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/bio">I'm</HeroLink>
-				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/designing">Designing</HeroLink>
-				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/story">My story</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/bio">I'm
+				<Arrow></Arrow>
+				</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/designing">Designing
+				<Arrow></Arrow>
+				</HeroLink>
+				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/story">My story
+				<Arrow></Arrow>
+				</HeroLink>
 			</div>
 			<ul className="pageNavigator">
 				<li>
