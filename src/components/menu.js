@@ -70,6 +70,7 @@ const FixedMenu = styled.div`
         border-top: 2em solid #000;
         border-right: 2em solid transparent;
         cursor: pointer;
+        outline: none;
 
         .menu {
             opacity: 0;
@@ -175,7 +176,7 @@ const Menu = (props) => {
 
     return (
         <FixedMenu leftPosition={props.leftPosition}>
-            <div className="openerMenu" onClick={() => setMenuVisibility(!menuVisibility)}>
+            <div className="openerMenu" role="button" tabIndex={0} onKeyPress={() => setMenuVisibility(!menuVisibility)} onClick={() => setMenuVisibility(!menuVisibility)}>
                 <div className={!menuVisibility ? 'menu visible' : 'menu'}>
                     <span className="close">
 
