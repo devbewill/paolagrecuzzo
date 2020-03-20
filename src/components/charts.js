@@ -127,6 +127,9 @@ const Text = styled.div`
 	overflow: hidden;
 	align-self: center;
 	transition: width 0.3s linear;
+	letter-spacing: -1px;
+	font-weight: 400;
+	line-height: 1.3;
 
 	.content {
 		opacity: 0;
@@ -137,7 +140,7 @@ const Text = styled.div`
 	}
 
 	${ChartItem}.visible & {
-		width: 500px;
+		width: 400px;
 
 		.content {
 			color: inherit;
@@ -173,7 +176,7 @@ const Charts = (props) => {
 			color: '#30a79d',
 			title: 'Ux Writing',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'I microtesti sono contenuti brevi che aiutano a muoversi in un’interfaccia, la scrittura si fonde con gli elementi visivi e con le funzionalità per guidare le persone a compiere attività. L’obiettivo è semplificare, trovare parole facili per spiegare azioni, etichette, pulsanti.'
 		},
 		{
 			name: 'Research',
@@ -181,7 +184,7 @@ const Charts = (props) => {
 			color: '#2383a2',
 			title: 'Research',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Ogni nuovo progetto inizia con un’attività di ricerca in 2 tempi: un momento divergente in cui raccogliere input e spunti variegati e un momento convergente in cui selezionare insight utili da mettere a frutto come driver di progettazione.'
 		},
 		{
 			name: 'Content Strategy',
@@ -189,7 +192,7 @@ const Charts = (props) => {
 			color: '#743a88',
 			title: 'Content Strategy',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Lo studio di una strategia passa attraverso la pianificazione e la progettazione dei contenuti in linea con gli obiettivi di business. Si compone di iniziative specifiche che si susseguono in un lasso di tempo medio/lungo.'
 		},
 		{
 			name: 'Tone of voice',
@@ -197,7 +200,7 @@ const Charts = (props) => {
 			color: '#061681',
 			title: 'Tone of voice',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Non è ciò che dici, ma come lo dici. Ogni testo ha una personalità; definirla prima di iniziare a scrivere è l’unica maniera per dare vita a contenuti con un’identità specifica e capaci di attivare una conversazione con gli utenti.'
 		},
 		{
 			name: 'Storyframe',
@@ -205,7 +208,7 @@ const Charts = (props) => {
 			color: '#c98e89',
 			title: 'Storyframe',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				"Costruire esperienze non basta, il vero terreno di sfida \u00E8 progettare abitudini: questo metodo di progettazione mette al centro del processo il comportamento dell'utente e contribuisce a far s\u00EC che il servizio/ prodotto progettato entri nella quotidianit\u00E0 d'uso delle persone."
 		},
 		{
 			name: 'User test',
@@ -213,7 +216,7 @@ const Charts = (props) => {
 			color: '#c12f29',
 			title: 'User test',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Il content design mira non solo alla chiarezza delle informazioni e all\u2019efficacia della comunicazione ma anche all\u2019usabilt\u00E0. Per questo \u00E8 bene effettuare test utente che diano visibilit\u00E0 all\u2019efficacia reale delle scelte di design in modo da tarare la progettazione su indicatori specifici.'
 		},
 		{
 			name: 'I.A.',
@@ -221,7 +224,7 @@ const Charts = (props) => {
 			color: '#79054f',
 			title: 'Information Architecture',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Prima di pensare alle parole \u00E8 bene definire una struttura, un\u2019architettura organizzativa logica e semantica delle informazioni, dei contenuti, dei processi e delle funzionalit\u00E0 di un sistema. Questa attivit\u00E0 permette poi di organizzare i contenuti in maniera razionale.'
 		},
 
 		{
@@ -230,7 +233,7 @@ const Charts = (props) => {
 			color: '#c12d7e',
 			title: 'Storyboard',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Ogni video parte da una sceneggiatura: lo storyboard guida, sequenza dopo sequenza, raccontando la storia che verr\u00E0 poi resa anche visivamente offrendo una rappresentazione semplificata dei momenti'
 		},
 		{
 			name: 'Copy',
@@ -238,7 +241,7 @@ const Charts = (props) => {
 			color: '#2d9ec1',
 			title: 'Copy',
 			text:
-				'g elit. Laborum praesentium molestiae dignissimos ab optio. Delectus reiciendis, facere autem molestiae accusamus labore in cum ab tempora totam exercitationem. Modi, ratione nesciunt.'
+				'Informare non basta: l\u2019attivit\u00E0 di copywriting mira a scrivere testi accattivanti e persuasivi. Il fine ultimo infatti non \u00E8 solo comunicativo ma commerciale, i testi quindi sono specificamente orientati alla conversione.'
 		}
 	];
 
