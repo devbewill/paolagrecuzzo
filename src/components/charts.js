@@ -37,6 +37,7 @@ const BarContainer = styled.div`
 	align-items: flex-end;
 	justify-content: center;
 	margin: 0 2em;
+	transition: margin 0.2s ease-in-out;
 	cursor: pointer;
 
 	> * {
@@ -51,6 +52,10 @@ const BarContainer = styled.div`
 		opacity: 1;
 	}
 
+	&:hover {
+		margin-bottom: 1em;
+	}
+
 	@media only screen and (max-width: 550px) {
 		margin: 0 auto;
 	}
@@ -61,8 +66,8 @@ const Bar = styled.div`
     margin: 0 auto;
     width: 1.5em;
     background: ${(props) => props.color || 'grey'};
-    /* background: ${getRandomColor}; */
-
+	/* background: ${getRandomColor}; */
+	
     @media only screen and (max-width: 550px) {
         width: 6.5vw;
         margin: 0.5em;
@@ -161,7 +166,6 @@ const Text = styled.div`
 				font-size: 3rem;
 			}
 		}
-
 		${ChartItem}.visible & {
 			width: auto;
 		}
@@ -265,14 +269,6 @@ const Charts = (props) => {
 			chartSingle.classList.toggle('visible');
 		}
 	};
-
-	// 	dangerouslySetInnerHTML = {{
-	// 		__html: `
-	//             var name = 'world';
-	//             console.log('Hello ' + name);
-	//         `,
-	//   }
-	//}
 
 	return (
 		<Chart>
