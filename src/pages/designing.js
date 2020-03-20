@@ -37,7 +37,7 @@ const DesigningSection = styled.div`
         }
 
         h1 {
-            font-size: 5rem;
+            font-size: 4.5rem;
             padding-bottom: 0.3em;
         }
 

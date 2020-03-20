@@ -149,15 +149,15 @@ const Text = styled.div`
         width: auto;
         position: absolute;
         left: 0;
-        bottom: 6.5em;
+        bottom: 8.5em;
 
         .content {
-            padding: 0 1em;
+            padding: 0;
         }
 
         ${ChartItem}:nth-child(3) &,
         ${ChartItem}:nth-child(7) & {
-            bottom: 3em;
+            bottom: 5em;
         }
 
         ${ChartItem}.visible & {
