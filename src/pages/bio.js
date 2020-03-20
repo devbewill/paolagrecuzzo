@@ -4,7 +4,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Menu from '../components/menu';
 import styled from 'styled-components';
-import face from '../images/face.jpg';
 import avatar from '../images/avatar.jpeg'
 
 
@@ -15,17 +14,6 @@ const BioSection = styled.div`
     .content {
         margin: 30vh 0 10vh 5rem;
         position: relative;
-
-        /* .image {
-            position: absolute;
-            z-index: -1;
-            left: 45vw;
-            top: 48vh;
-            width: 30vw;
-            height: 30vw;
-            background: url(${face}) no-repeat;
-            background-size: contain;
-        } */
 
         .image {
             position: fixed;
