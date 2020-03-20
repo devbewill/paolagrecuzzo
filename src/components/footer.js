@@ -106,7 +106,7 @@ const Footer = () => {
 
 			</ul>
 
-			<div className="credits">* craft with <span>❤️</span>	 by <a href="http://www.stefanoperelli.com" target="_blank" rel="noopener noreferrer">stefanoperelli.com</a>	</div>
+			<div className="credits">* craft with <span role="img" aria-label="sheep">❤️</span>	 by <a href="http://www.stefanoperelli.com" target="_blank" rel="noopener noreferrer">stefanoperelli.com</a>	</div>
 		</StyledFooter>
 	);
 };
