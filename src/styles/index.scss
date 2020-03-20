@@ -21,7 +21,13 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-h1,h2,h3 {font-family:"Playfair Display"; margin: 0 0 0.5em 0; line-height: 1}
+h1,
+h2,
+h3 {
+	font-family: "Playfair Display";
+	margin: 0 0 0.5em 0;
+	line-height: 1;
+}
 
 * {
 	box-sizing: inherit;
@@ -38,50 +44,54 @@ p {
 	font-weight: 400;
 }
 
-a {text-decoration: none; color: inherit}
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
 ul {
 	list-style-type: none;
 	padding: 0;
 
-	li { display: inline-block; margin: 0 1em 0 0; line-height: 1.8;}
+	li {
+		display: inline-block;
+		margin: 0 1em 0 0;
+		line-height: 1.8;
+	}
 }
-
 
 .headroom-wrapper {
-    width: 50vw;
-    margin-right: 0;
-    margin-left: auto;
+	width: 50vw;
+	margin-right: 0;
+	margin-left: auto;
 }
 @media only screen and (max-width: 550px) {
-    .headroom-wrapper {
-    	width: 60vw;
+	.headroom-wrapper {
+		width: 60vw;
 	}
-     
-			}
-			
-.headroom {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-.headroom--unfixed {
-  position: relative;
-  transform: translateY(0);
-}
-.headroom--scrolled {
-  transition: transform 700ms ease-in-out;
-}
-.headroom--unpinned {
-  position: fixed;
-  transform: translateY(-100%);
-}
-.headroom--pinned {
-  position: fixed;
-  transform: translateY(0%);
 }
 
+.headroom {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.headroom--unfixed {
+	position: relative;
+	transform: translateY(0);
+}
+.headroom--scrolled {
+	transition: transform 700ms ease-in-out;
+}
+.headroom--unpinned {
+	position: fixed;
+	transform: translateY(-100%);
+}
+.headroom--pinned {
+	position: fixed;
+	transform: translateY(0%);
+}
 
 @media only screen and (max-width: 550px) {
 	html {

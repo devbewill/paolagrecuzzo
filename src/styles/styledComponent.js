@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const getRandomColor = () => {
-	return `hsla(${360 * Math.random()},70%,80%,1)`;
+	return `hsla(${360 * Math.random()},100%,70%,1)`;
 };
 
 export const Container = styled.div`
