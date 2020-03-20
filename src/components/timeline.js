@@ -111,6 +111,7 @@ const Timeline = () => {
 					clear: both;
 					text-align: left;
 					margin-top: -50px;
+					outline: none;
 
 					&.visible {
 						.body {
@@ -202,22 +203,6 @@ const Timeline = () => {
 							}
 						}
 					}
-
-/* 
-					&:nth-child(2n) {
-						@media only screen and (min-width: 900px) {
-							text-align: right;
-							float: left;
-							.title {
-								&:before {
-									left: calc(100% + 98px);
-								}
-								&.big:before {
-									transform: translate(-8px, -50%);
-								}
-							}
-						}
-					} */
 				}
 			}
 		}
@@ -238,8 +223,8 @@ const Timeline = () => {
 				<div className="entries">
 					{history.map((job, index) => {
 						return (
-							<div key={index} className="entry" onClick={showCurrentItem}>
-								<a className="title" >{job.year} </a>
+							<div key={index} className="entry" role="button" tabIndex={0} onKeyPress={showCurrentItem} onClick={showCurrentItem}>
+								<div className="title" >{job.year} </div>
 								<div className="body">
 									<p>
 										{job.role}
