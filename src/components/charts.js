@@ -140,7 +140,7 @@ const Text = styled.div`
 	}
 
 	${ChartItem}.visible & {
-		width: 400px;
+		width: 450px;
 
 		.content {
 			color: inherit;
@@ -152,7 +152,7 @@ const Text = styled.div`
 		width: auto;
 		position: absolute;
 		left: 0;
-		top: 21em;
+		top: 23em;
 
 		.content {
 			padding: 0;
@@ -195,7 +195,7 @@ const Charts = (props) => {
 				'Lo studio di una strategia passa attraverso la pianificazione e la progettazione dei contenuti in linea con gli obiettivi di business. Si compone di iniziative specifiche che si susseguono in un lasso di tempo medio/lungo.'
 		},
 		{
-			name: 'Tone of voice',
+			name: 'TOV',
 			value: '50',
 			color: '#061681',
 			title: 'Tone of voice',
@@ -219,7 +219,7 @@ const Charts = (props) => {
 				'Il content design mira non solo alla chiarezza delle informazioni e all\u2019efficacia della comunicazione ma anche all\u2019usabilt\u00E0. Per questo \u00E8 bene effettuare test utente che diano visibilit\u00E0 all\u2019efficacia reale delle scelte di design in modo da tarare la progettazione su indicatori specifici.'
 		},
 		{
-			name: 'I.A.',
+			name: 'IA',
 			value: '50',
 			color: '#79054f',
 			title: 'Information Architecture',
@@ -233,7 +233,7 @@ const Charts = (props) => {
 			color: '#c12d7e',
 			title: 'Storyboard',
 			text:
-				'Ogni video parte da una sceneggiatura: lo storyboard guida, sequenza dopo sequenza, raccontando la storia che verr\u00E0 poi resa anche visivamente offrendo una rappresentazione semplificata dei momenti'
+				'Ogni video parte da una sceneggiatura: lo storyboard guida, sequenza dopo sequenza, raccontando la storia che verr\u00E0 poi resa anche visivamente offrendo una rappresentazione semplificata dei momenti.'
 		},
 		{
 			name: 'Copy',
@@ -241,7 +241,7 @@ const Charts = (props) => {
 			color: '#2d9ec1',
 			title: 'Copy',
 			text:
-				'Informare non basta: l\u2019attivit\u00E0 di copywriting mira a scrivere testi accattivanti e persuasivi. Il fine ultimo infatti non \u00E8 solo comunicativo ma commerciale, i testi quindi sono specificamente orientati alla conversione.'
+				'Informare non basta: l\u2019attivit\u00E0 di copywriting mira a scrivere testi accattivanti e persuasivi.<br >Il fine ultimo non \u00E8 solo comunicativo ma commerciale, i testi quindi sono specificamente orientati alla conversione.'
 		}
 	];
 
@@ -266,6 +266,14 @@ const Charts = (props) => {
 		}
 	};
 
+	// 	dangerouslySetInnerHTML = {{
+	// 		__html: `
+	//             var name = 'world';
+	//             console.log('Hello ' + name);
+	//         `,
+	//   }
+	//}
+
 	return (
 		<Chart>
 			{skills.map((skill, index) => {
@@ -278,7 +286,7 @@ const Charts = (props) => {
 						<Text>
 							<div className="content">
 								<h2>{skill.title}</h2>
-								{skill.text}
+								<div dangerouslySetInnerHTML={{ __html: skill.text }} />
 							</div>
 						</Text>
 					</ChartItem>
