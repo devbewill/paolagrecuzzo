@@ -115,8 +115,8 @@ const BioPage = (props) => {
         <Theme>
             <Layout>
                 <SEO title="Bio" />
+                <Menu />
                 <BioSection>
-                    <Menu />
                     <div className="content">
                         <h1 data-sal="slide-right" data-sal-duration="600" data-sal-delay="300">I'm</h1>
                         <p data-sal="slide-up" data-sal-duration="800" style={{ marginTop: '6em' }}>

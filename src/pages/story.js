@@ -43,8 +43,8 @@ const StoryPage = (props) => {
         <Theme>
             <Layout>
                 <SEO title="my story" />
+                <Menu />
                 <StorySection>
-                    <Menu />
                     <div className="content">
                         <h1 data-sal="slide-right" data-sal-duration="600">My story</h1>
                         <Timeline></Timeline>

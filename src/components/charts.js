@@ -23,7 +23,6 @@ const Chart = styled.div`
         
     }
 `
-
 const ChartItem = styled.div`
     display: flex;
     align-items: flex-end;
@@ -32,7 +31,6 @@ const ChartItem = styled.div`
         flex-direction: row-reverse;
     }
 `
-
 const BarContainer = styled.div`
     position: relative;
     flex: wrap;
@@ -58,7 +56,6 @@ const BarContainer = styled.div`
 
 
 `
-
 const Bar = styled.div`
     height: ${props => (props.value / 2.5) || 0}em;
     border-radius: 1em;
@@ -71,7 +68,6 @@ const Bar = styled.div`
         margin: 0.5em;
     }
 `
-
 const Description = styled.div`
     font-size: 0.7rem;
     width: 80px;
@@ -126,8 +122,8 @@ const Description = styled.div`
         }
     }
 `
-
 const Text = styled.div`
+
     width: 0;
     overflow: hidden;
     align-self: center;
@@ -171,31 +167,6 @@ const Text = styled.div`
 `
 
 const Charts = (props) => {
-
-    const showCurrentItem = (event) => {
-        event.preventDefault();
-
-        let target = event.target;
-        let chart = target.parentNode.parentNode;
-        let chartSingle = target.parentNode;
-
-        if (chartSingle.classList.contains('visible')) {
-
-            chart.classList.toggle('visible');
-            chartSingle.classList.toggle('visible');
-        } else {
-
-            let visibleItems = document.querySelectorAll('.visible');
-            for (var i = 0; i < visibleItems.length; i++) {
-                visibleItems[i].classList.remove('visible')
-            }
-
-            chart.classList.toggle('visible');
-            chartSingle.classList.toggle('visible');
-
-        }
-    }
-
     const skills = [
         {
             name: 'Ux Writing',
@@ -263,9 +234,31 @@ const Charts = (props) => {
         }
     ]
 
+    const showCurrentItem = (event) => {
+        event.preventDefault();
+
+        let target = event.target;
+        let chart = target.parentNode.parentNode;
+        let chartSingle = target.parentNode;
+
+        if (chartSingle.classList.contains('visible')) {
+
+            chart.classList.toggle('visible');
+            chartSingle.classList.toggle('visible');
+        } else {
+
+            let visibleItems = document.querySelectorAll('.visible');
+            for (var i = 0; i < visibleItems.length; i++) {
+                visibleItems[i].classList.remove('visible')
+            }
+
+            chart.classList.toggle('visible');
+            chartSingle.classList.toggle('visible');
+
+        }
+    }
 
     return (
-
         <Chart>
             {skills.map((skill, index) => {
                 return (
@@ -284,7 +277,6 @@ const Charts = (props) => {
                 );
             })}
         </Chart>
-
     );
 };
 
