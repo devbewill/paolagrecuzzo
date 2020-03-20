@@ -18,7 +18,7 @@ const Chart = styled.div`
         padding-bottom: 0;
 
         &.visible {
-            padding-bottom: 10em;
+            padding-bottom: 11em;
         }
         
     }
@@ -154,7 +154,7 @@ const Text = styled.div`
         width: auto;
         position: absolute;
         left: 0;
-        top: 22em;
+        top: 21em;
 
         .content {
             padding: 0;
