@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import face from '../images/face.jpg';
-import { Arrow } from '../styles/styledComponent'
 import styled from 'styled-components';
 
 const Intro = () => {
-
 	const IntroSection = styled.section`
 		margin-top: -200px;
 		display: flex;
@@ -30,12 +28,11 @@ const Intro = () => {
 			z-index: -1;
 			top: 20vh;
 			bottom: 0;
-			left:65vw;
+			left: 65vw;
 			right: 0;
 			background: url(${face}) no-repeat;
 			background-size: cover;
 		}
-
 
 		.fixedImg {
 			display: none;
@@ -43,17 +40,15 @@ const Intro = () => {
 			position: fixed;
 			max-width: 280px;
 			right: -40px;
-			bottom:-20px;
-
+			bottom: -20px;
 		}
-
 
 		@media only screen and (max-width: 550px) {
 			height: 95vh;
 
 			.overlayImg {
 				display: none;
-				opacity:1;
+				opacity: 1;
 				bottom: -30px;
 				right: -55px;
 				left: 0;
@@ -67,11 +62,8 @@ const Intro = () => {
 				position: fixed;
 				max-width: 280px;
 				right: -40px;
-				bottom:-20px;
-
+				bottom: -20px;
 			}
-
-			
 
 			.homeMenu {
 				margin-top: -6vh;
@@ -81,11 +73,10 @@ const Intro = () => {
 
 			.pageNavigator {
 				left: 1em;
-				bottom: 6vh
+				bottom: 6vh;
 			}
 		}
-
-	`
+	`;
 
 	const HeroLink = styled(Link)`
 		display: block;
@@ -107,7 +98,7 @@ const Intro = () => {
 		}
 
 		
-	`
+	`;
 
 	const StyledLink = styled(Link)`
 		display: block;
@@ -127,22 +118,20 @@ const Intro = () => {
 			text-align: left;
 		}
 		
-	`
+	`;
 
 	return (
 		<IntroSection>
-			<div data-sal="slide-left" data-sal-duration="700" className="overlayImg">
-
-			</div>
+			<div data-sal="slide-left" data-sal-duration="700" className="overlayImg" />
 			<div className="homeMenu">
-				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/bio">I'm
-				<Arrow></Arrow>
+				<HeroLink data-sal="slide-right" data-sal-delay="200" to="/bio">
+					I'm
 				</HeroLink>
-				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/designing">Designing
-				<Arrow></Arrow>
+				<HeroLink data-sal="slide-right" data-sal-delay="400" to="/designing">
+					Designing
 				</HeroLink>
-				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/story">My story
-				<Arrow></Arrow>
+				<HeroLink data-sal="slide-right" data-sal-delay="600" to="/story">
+					My story
 				</HeroLink>
 			</div>
 			<ul className="pageNavigator">
