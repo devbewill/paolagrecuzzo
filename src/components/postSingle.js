@@ -1,19 +1,19 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
-import TextContent from '../components/textContent';
+import TextContent from './textContent';
 
-const SinglePostExt = ({ postProps }) => {
-
+const PostSingle = ({ postProps }) => {
 	const StyledPost = styled.div`
 		margin: 0 0 15em 0;
 
-		p{
+		p {
 			font-weight: 400;
 			letter-spacing: -1px;
 			font-size: 1.1rem;
 			line-height: 1.7;
 		}
-		
+
 		.head {
 			display: flex;
 			width: 100%;
@@ -24,15 +24,22 @@ const SinglePostExt = ({ postProps }) => {
 					font-size: 0.8rem;
 					font-weight: 700;
 				}
-				h2 {max-width: 65vw;}
+				h2 {
+					max-width: 65vw;
+				}
 			}
 
 			.tags {
-				margin: 0;
+				margin: 0 5px;
+				display: inline-block;
 				text-transform: uppercase;
 				font-size: 0.8rem;
 				font-weight: 700;
 				letter-spacing: -1px;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -60,7 +67,7 @@ const SinglePostExt = ({ postProps }) => {
 			height: 15vw;
 			background: rgba(0, 0, 0, 0.55);
 			z-index: 2;
-			left:2rem;
+			left: 2rem;
 			bottom: -2rem;
 			color: #fff;
 			line-height: 1;
@@ -72,38 +79,39 @@ const SinglePostExt = ({ postProps }) => {
 			&:hover {
 				color: #222;
 				background: rgba(255, 255, 255, 0.55);
-
 			}
 		}
 
-
-		&:nth-child(2n){
+		&:nth-child(2n) {
 			.flexed {
 				flex-direction: row-reverse;
 			}
-			
+
 			.goToSource {
 				left: auto;
-				right:2rem;
+				right: 2rem;
 			}
-			
 		}
-
 
 		@media only screen and (max-width: 550px) {
 			margin-bottom: 2em;
 
-			.head { 
+			.head {
 				flex-flow: column;
 				padding: 0 1em;
 
-				.title h2 {max-width: none; font-size :1.9rem}
+				.title h2 {
+					max-width: none;
+					font-size: 1.9rem;
+				}
 			}
 			.flexed {
 				flex-flow: column;
 				flex-direction: column-reverse;
 
-				.text {padding: 3em 1em;}
+				.text {
+					padding: 3em 1em;
+				}
 
 				.thumb {
 					width: 100vw;
@@ -111,7 +119,7 @@ const SinglePostExt = ({ postProps }) => {
 				}
 			}
 
-			.goToSource{
+			.goToSource {
 				font-size: 1.5rem;
 				width: 45vw;
 				height: 5vh;
@@ -121,11 +129,10 @@ const SinglePostExt = ({ postProps }) => {
 				padding-left: 0;
 			}
 
-		
-			&:nth-child(2n){
+			&:nth-child(2n) {
 				.flexed {
 					flex-direction: column-reverse;
-				}	
+				}
 			}
 		}
 	`;
@@ -141,29 +148,36 @@ const SinglePostExt = ({ postProps }) => {
 		background-size: cover;
 		transition: all 0.4s ease-in;
 
-		  ${StyledPost}:nth-child(2n) & {
-				left: 0;
-				right: 2rem;
-			}
+		${StyledPost}:nth-child (2n) & {
+			left: 0;
+			right: 2rem;
+		}
 
-		/* @media only screen and (max-width: 550px) {
+		@media only screen and (max-width: 550px) {
 			width: 100vw;
 			min-height: 200px;
-		} */
-
+		}
 	`;
 
 	return (
 		<StyledPost data-sal="slide-up" data-sal-duration="800">
 			<div className="head">
 				<div className="title">
-					<span className="date">{postProps.day}.{postProps.month}.{postProps.year}</span>
-					<h2>{postProps.title}</h2>
+					<span className="date">
+						{postProps.day}.{postProps.month}.{postProps.year}
+					</span>
+					<h2>
+						<Link to={postProps.slug}>{postProps.title}</Link>
+					</h2>
 				</div>
 
 				<ul className="tags">
 					{postProps.tags.map((tag, index) => {
-						return <li key={index}>{tag}</li>;
+						return (
+							<Link className="tags" key={index} to={`/blog/${tag}/`}>
+								{tag}
+							</Link>
+						);
 					})}
 				</ul>
 			</div>
@@ -173,13 +187,14 @@ const SinglePostExt = ({ postProps }) => {
 					<TextContent content={postProps.body} />
 				</div>
 				<div className="thumb">
-					<a href={postProps.target} className="goToSource">Vai alla fonte</a>
+					<a href={postProps.target} className="goToSource">
+						Vai alla fonte
+					</a>
 					<ImgPost background={postProps.imgPost} />
 				</div>
 			</div>
-
 		</StyledPost>
 	);
 };
 
-export default SinglePostExt;
+export default PostSingle;
