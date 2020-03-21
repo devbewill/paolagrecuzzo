@@ -167,7 +167,7 @@ const SinglePostExt = ({ postProps }) => {
 				<ul className="tags">
 					{postProps.tags.map((tag, index) => {
 						return (
-							<Link className="tags" key={index} to={`/blog/${tag}/`}>
+							<Link className="tags" key={index} to={`/tags/${tag}/`}>
 								{tag}
 							</Link>
 						);

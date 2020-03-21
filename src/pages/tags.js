@@ -1,8 +1,5 @@
 import React from 'react';
 
-// Utilities
-import kebabCase from 'lodash/kebabCase';
-
 // Components
 import { Link, graphql } from 'gatsby';
 
