@@ -3,15 +3,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import SinglePost from './singlePost';
 
-const PostsSection = styled.section`
-	.postContainer {
-		margin-top: 20vh;
-		display: flex;
-		flex-wrap: wrap;
+const PostsSection = styled.div`
+	margin-top: 20vh;
+	display: flex;
+	flex-wrap: wrap;
 
-		@media only screen and (max-width: 550px) {
-			margin-top: 10vh;
-		}
+	@media only screen and (max-width: 550px) {
+		margin-top: 10vh;
 	}
 `;
 
@@ -46,30 +44,25 @@ export default () => (
 		`}
 		render={(data) => (
 			<PostsSection>
-				{/* <h2>
-						<span>in</span>sight
-					</h2> */}
-				<div className="postContainer">
-					{data.allContentfulBlogPost.edges.map((edge, index) => {
-						let target, postProps;
-						edge.node.source ? (target = edge.node.source) : (target = `/blog/${edge.node.slug}`);
+				{data.allContentfulBlogPost.edges.map((edge, index) => {
+					let target, postProps;
+					edge.node.source ? (target = edge.node.source) : (target = `/blog/${edge.node.slug}`);
 
-						postProps = {
-							slug: `/blog/${edge.node.slug}`,
-							imgPost: edge.node.featuredImage.fluid.src,
-							externalLink: edge.node.source,
-							tags: edge.node.tag,
-							title: edge.node.title,
-							body: edge.node.body.childMarkdownRemark.html,
-							day: edge.node.day,
-							month: edge.node.month,
-							year: edge.node.year,
-							target: target
-						};
+					postProps = {
+						slug: `/blog/${edge.node.slug}`,
+						imgPost: edge.node.featuredImage.fluid.src,
+						externalLink: edge.node.source,
+						tags: edge.node.tag,
+						title: edge.node.title,
+						body: edge.node.body.childMarkdownRemark.html,
+						day: edge.node.day,
+						month: edge.node.month,
+						year: edge.node.year,
+						target: target
+					};
 
-						return <SinglePost key={index} postProps={postProps} />;
-					})}
-				</div>
+					return <SinglePost key={index} postProps={postProps} />;
+				})}
 			</PostsSection>
 		)}
 	/>

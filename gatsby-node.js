@@ -30,7 +30,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 	// Make tag pages
 	tags.forEach((tag) => {
 		createPage({
-			path: `/tags/${tag.fieldValue}/`,
+			path: `/blog/${tag.fieldValue}/`,
 			component: tagTemplate,
 			context: {
 				tag: tag.fieldValue

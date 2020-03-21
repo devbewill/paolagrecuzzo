@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 import Theme from '../styles/Theme';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-
 import Menu from '../components/menu';
 import SinglePost from '../components/singlePost';
 
@@ -44,9 +43,9 @@ const Tags = ({ pageContext, data }) => {
 						})}
 					</ul>
 					{/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
+					This links to a page that does not yet exist.
+					You'll come back to it!
+					*/}
 					<Link to="/tags">All tags</Link>
 				</div>
 			</Layout>

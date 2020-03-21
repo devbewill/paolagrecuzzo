@@ -167,7 +167,7 @@ const SinglePost = ({ postProps }) => {
 				<ul className="tags">
 					{postProps.tags.map((tag, index) => {
 						return (
-							<Link className="tags" key={index} to={`/tags/${tag}/`}>
+							<Link className="tags" key={index} to={`/blog/${tag}/`}>
 								{tag}
 							</Link>
 						);
