@@ -4,20 +4,53 @@ import Theme from '../styles/Theme';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Menu from '../components/menu';
+import styled from 'styled-components';
 import PostSingle from '../components/postSingle';
+
+const PostsSection = styled.div`
+	margin-top: 5vh;
+	display: flex;
+	flex-wrap: wrap;
+
+	.introTag {
+		margin: 0 3rem 3rem 3rem;
+		font-weight: 800;
+		font-size: 1.8rem;
+
+		span {
+			text-transform: uppercase;
+			color: ${(props) => props.theme.colors.primary};
+		}
+	}
+
+	.allTagsLink {
+		font-size: 1rem;
+		margin-left: 1rem;
+		text-decoration: underline;
+	}
+
+	@media only screen and (max-width: 550px) {
+		margin-top: 5vh;
+	}
+`;
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
 	const { edges, totalCount } = data.allContentfulBlogPost;
-	const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
 
 	return (
 		<Theme>
 			<Layout>
 				<SEO title="Tags" />
 				<Menu leftPosition="3em" />
-				<div>
-					<h1>{tagHeader} Template</h1>
+				<PostsSection>
+					<p className="introTag">
+						{totalCount} articol{`${totalCount === 1 ? 'o' : 'i'}`} in <span>{tag}</span>
+						<Link className="allTagsLink" to="/tags">
+							cambia tag
+						</Link>
+					</p>
+
 					<ul>
 						{edges.map(({ node }) => {
 							let target, postProps;
@@ -42,12 +75,7 @@ const Tags = ({ pageContext, data }) => {
 							);
 						})}
 					</ul>
-					{/*
-					This links to a page that does not yet exist.
-					You'll come back to it!
-					*/}
-					<Link to="/tags">All tags</Link>
-				</div>
+				</PostsSection>
 			</Layout>
 		</Theme>
 	);

@@ -50,11 +50,11 @@ const TagsPage = ({ data: { allContentfulBlogPost: { group } } }) => (
 			<SEO title="Tags" />
 			<Menu leftPosition="3em" />
 			<TagsSection>
-				<h1>All Tags</h1>
+				<h1>Tags</h1>
 				<ul>
 					{group.map((tag) => (
 						<li key={tag.fieldValue}>
-							<span>{tag.totalCount} in </span>
+							{/* <span>{tag.totalCount} in </span> */}
 							<Link to={`/blog/${tag.fieldValue}/`}>{tag.fieldValue}</Link>
 						</li>
 					))}

@@ -31,10 +31,15 @@ const PostSingle = ({ postProps }) => {
 
 			.tags {
 				margin: 0 5px;
+				display: inline-block;
 				text-transform: uppercase;
 				font-size: 0.8rem;
 				font-weight: 700;
 				letter-spacing: -1px;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -161,7 +166,9 @@ const PostSingle = ({ postProps }) => {
 					<span className="date">
 						{postProps.day}.{postProps.month}.{postProps.year}
 					</span>
-					<h2>{postProps.title}</h2>
+					<h2>
+						<Link to={postProps.slug}>{postProps.title}</Link>
+					</h2>
 				</div>
 
 				<ul className="tags">
