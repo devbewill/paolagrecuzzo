@@ -1,6 +1,12 @@
 import React from 'react';
-
 import { Link, graphql } from 'gatsby';
+import Theme from '../styles/Theme';
+import Layout from '../components/layout';
+// import Head from '../components/head';
+import SEO from '../components/seo';
+
+import Menu from '../components/menu';
+import SinglePostExt from '../components/singlePostExt';
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
@@ -8,26 +14,44 @@ const Tags = ({ pageContext, data }) => {
 	const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
 
 	return (
-		<div>
-			<h1>{tagHeader} Template</h1>
-			<ul>
-				{edges.map(({ node }) => {
-					const { slug } = node;
-					const { title } = node;
+		<Theme>
+			<Layout>
+				<SEO title="Tags" />
+				<Menu leftPosition="3em" />
+				<div>
+					<h1>{tagHeader} Template</h1>
+					<ul>
+						{edges.map(({ node }) => {
+							let target, postProps;
+							node.source ? (target = node.source) : (target = `/blog/${node.slug}`);
 
-					return (
-						<li key={slug}>
-							<Link to={`/blog/${slug}`}>{title}</Link>
-						</li>
-					);
-				})}
-			</ul>
-			{/*
+							postProps = {
+								slug: `/blog/${node.slug}`,
+								imgPost: node.featuredImage.fluid.src,
+								externalLink: node.source,
+								tags: node.tag,
+								title: node.title,
+								body: node.body.childMarkdownRemark.html,
+								day: node.day,
+								month: node.month,
+								year: node.year,
+								target: target
+							};
+							return (
+								<li key={postProps.slug}>
+									<SinglePostExt key={postProps.slug} postProps={postProps} />
+								</li>
+							);
+						})}
+					</ul>
+					{/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-			<Link to="/tags">All tags</Link>
-		</div>
+					<Link to="/tags">All tags</Link>
+				</div>
+			</Layout>
+		</Theme>
 	);
 };
 
@@ -39,8 +63,23 @@ export const pageQuery = graphql`
 			totalCount
 			edges {
 				node {
-					slug
 					title
+					slug
+					source
+					day: publishedDate(formatString: "DD")
+					month: publishedDate(formatString: "MM")
+					year: publishedDate(formatString: "YY")
+					tag
+					featuredImage {
+						fluid(maxWidth: 1200, quality: 90) {
+							...GatsbyContentfulFluid_withWebp
+						}
+					}
+					body {
+						childMarkdownRemark {
+							html
+						}
+					}
 				}
 			}
 		}
