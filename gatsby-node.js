@@ -3,6 +3,7 @@ const path = require('path');
 module.exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const blogTemplate = path.resolve('./src/templates/post.js');
+	const tagTemplate = path.resolve('src/templates/tags.js');
 	// const projectTemplate = path.resolve('./src/templates/project.js');
 	// const res = await graphql(`
 	//     query {
@@ -33,8 +34,29 @@ module.exports.createPages = async ({ graphql, actions }) => {
 					}
 				}
 			}
+
+			allContentfulBlogPost {
+				group(field: tag) {
+					totalCount
+					fieldValue
+				}
+  			}
         }
-    `);
+	`);
+
+	// Extract tag data from query
+	const tags = res.data.allContentfulBlogPost.group;
+
+	// Make tag pages
+	tags.forEach((tag) => {
+		createPage({
+			path: `/tags/${tag.fieldValue}/`,
+			component: tagTemplate,
+			context: {
+				tag: tag.fieldValue
+			}
+		});
+	});
 
 	const posts = res.data.allContentfulBlogPost.edges;
 	posts.forEach((edge, index) => {
