@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import TextContent from './textContent';
 
-const SinglePost = ({ postProps }) => {
+const PostSingle = ({ postProps }) => {
 	const StyledPost = styled.div`
 		margin: 0 0 15em 0;
 
@@ -190,4 +190,4 @@ const SinglePost = ({ postProps }) => {
 	);
 };
 
-export default SinglePost;
+export default PostSingle;

@@ -4,7 +4,7 @@ import Theme from '../styles/Theme';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Menu from '../components/menu';
-import SinglePost from '../components/singlePost';
+import PostSingle from '../components/postSingle';
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
@@ -37,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
 							};
 							return (
 								<li key={postProps.slug}>
-									<SinglePost key={postProps.slug} postProps={postProps} />
+									<PostSingle key={postProps.slug} postProps={postProps} />
 								</li>
 							);
 						})}

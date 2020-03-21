@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import SinglePost from './singlePost';
+import PostSingle from './postSingle';
 
 const PostsSection = styled.div`
 	margin-top: 20vh;
@@ -61,7 +61,7 @@ export default () => (
 						target: target
 					};
 
-					return <SinglePost key={index} postProps={postProps} />;
+					return <PostSingle key={index} postProps={postProps} />;
 				})}
 			</PostsSection>
 		)}
