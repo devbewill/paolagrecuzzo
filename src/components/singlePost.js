@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import TextContent from '../components/textContent';
+import TextContent from './textContent';
 
-const SinglePostExt = ({ postProps }) => {
+const SinglePost = ({ postProps }) => {
 	const StyledPost = styled.div`
 		margin: 0 0 15em 0;
 
@@ -190,4 +190,4 @@ const SinglePostExt = ({ postProps }) => {
 	);
 };
 
-export default SinglePostExt;
+export default SinglePost;

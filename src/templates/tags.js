@@ -2,11 +2,10 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Theme from '../styles/Theme';
 import Layout from '../components/layout';
-// import Head from '../components/head';
 import SEO from '../components/seo';
 
 import Menu from '../components/menu';
-import SinglePostExt from '../components/singlePostExt';
+import SinglePost from '../components/singlePost';
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
@@ -39,7 +38,7 @@ const Tags = ({ pageContext, data }) => {
 							};
 							return (
 								<li key={postProps.slug}>
-									<SinglePostExt key={postProps.slug} postProps={postProps} />
+									<SinglePost key={postProps.slug} postProps={postProps} />
 								</li>
 							);
 						})}
