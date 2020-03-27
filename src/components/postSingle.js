@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import TextContent from './textContent';
 
-const PostSingle = ({ postProps }) => {
+const PostSingle = ({ postProps, setFilterBy }) => {
 	const StyledPost = styled.div`
 		margin: 0 0 15em 0;
 
@@ -174,9 +174,12 @@ const PostSingle = ({ postProps }) => {
 				<ul className="tags">
 					{postProps.tags.map((tag, index) => {
 						return (
-							<Link className="tags" key={index} to={`/blog/${tag}/`}>
+							// <Link className="tags" key={index} to={`/blog/${tag}/`}>
+							// 	{tag}
+							// </Link>
+							<span className="tags" key={index} onClick={() => setFilterBy(tag)}>
 								{tag}
-							</Link>
+							</span>
 						);
 					})}
 				</ul>

@@ -40,6 +40,7 @@
     "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.25.2",
+    "react-transition-group": "^4.3.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

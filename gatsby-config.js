@@ -9,11 +9,10 @@ module.exports = {
 	siteMetadata: {
 		title: 'paolagrecuzzo.com',
 		author: 'Paola Grecuzzo',
-		description:
-			"Paola Grecuzzo- Content Designer - Milano",
-		baseUrl: "https://paolagrecuzzo.com", // No trailing slash allowed!
-		image: "screenshot.png", // Path to your image you placed in the 'static' folder
-		twitterUsername: "",
+		description: 'Paola Grecuzzo- Content Designer - Milano',
+		baseUrl: 'https://paolagrecuzzo.com', // No trailing slash allowed!
+		image: 'screenshot.png', // Path to your image you placed in the 'static' folder
+		twitterUsername: ''
 	},
 	plugins: [
 		{
@@ -47,13 +46,13 @@ module.exports = {
 				disabledClassName: 'sal-disabled', // Class name which defines the disabled state
 				rootMargin: '0% 50%', // Corresponds to root's bounding box margin
 				enterEventName: 'sal:in', // Enter event name
-				exitEventName: 'sal:out', // Exit event name
+				exitEventName: 'sal:out' // Exit event name
 			}
 		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Playfair Display\:400,700,900`, `Gothic A1\:100,300,400,700,800,900`, `Italiana`],
+				fonts: [ `Playfair Display\:400,700,900`, `Gothic A1\:100,300,400,700,800,900`, `Italiana` ],
 				display: 'swap'
 			}
 		},
